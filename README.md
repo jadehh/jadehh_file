@@ -42,7 +42,7 @@
 * [conta_ocr_lib64_encryption.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.0/conta_ocr-V2.4.6.4_lib64_encryption.zip)
 ---
 
-## 箱号识别服务定制版2.4.6.2
+## 箱号识别服务定制版V2.4.6.2
 * [conta_ocr_customV2.4.6.2](https://github.com/jadehh/ContainerOCR/releases/tag/conta_ocr_customV2.4.6.2)
 #### 下载地址
 * [conta_ocr_custom](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.0/conta_ocr_custom-V2.4.6.2)
