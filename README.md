@@ -1,4 +1,10 @@
 # 算法前端配置界面
+## 算法前端配置界面V1.1.2.2
+*  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v1.1.2.2)
+#### 下载地址
+* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/AlgorithmConfiure-V1.1.2-0-Windows_lib32.zip)
+----
+
 ## 算法前端配置界面V1.1.2.1
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v1.1.2.1)
 #### 下载地址
