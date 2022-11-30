@@ -1,4 +1,21 @@
 # 算法前端配置界面
+## 算法前端配置界面V1.1.2.2
+*  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v1.1.2.2)
+#### 下载地址
+* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/Windows_lib32.zip)
+* [Linux_lib64.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V1.1.2-2-Portable.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/AlgorithmConfiure_setup-V1.1.2-2-Portable.exe)
+* [AlgorithmConfiure_setup-V1.1.2-2.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/AlgorithmConfiure_setup-V1.1.2-2.exe)
+* [Linux-Portable.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/Linux-Portable.zip)
+* [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/Linux.zip)
+----
+
+## 箱号识别服务模型库2022-09-30
+
+### 下载地址
+
+* [models.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV1.1.2.2/models.zip)
+
 ## 算法前端配置界面V1.1.2.1
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v1.1.2.1)
 #### 下载地址
