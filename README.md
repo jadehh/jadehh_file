@@ -1,5 +1,5 @@
 # 算法前端配置界面
-## 算法前端配置解密V2.0.0.2
+## 算法前端配置界面V2.0.0.2
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.2)
 #### 下载地址
 * [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Windows_lib32.zip)
@@ -10,7 +10,7 @@
 * [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux.zip)
 ----
 
-## 算法前端配置解密V2.0.0.1
+## 算法前端配置界面V2.0.0.1
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.1)
 #### 下载地址
 * [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Windows_lib32.zip)
