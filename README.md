@@ -1,4 +1,6 @@
 # 算法前端配置界面
+## 算法前端配置解密V2.0.0.1
+
 ## 算法前端配置界面V1.1.2.2
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v1.1.2.2)
 #### 下载地址
