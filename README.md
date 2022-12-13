@@ -1,4 +1,12 @@
 # 算法前端配置界面
+## Container_Npu 
+### Models
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
+#### 下载地址
+* [models.zip]()
+----
+
+
 ## 算法前端配置界面V2.0.0.2
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.2)
 #### 下载地址
