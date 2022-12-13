@@ -6,7 +6,7 @@
 * [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
 
 ----
-----
+
 
 
 ## 算法前端配置界面V2.0.0.2
