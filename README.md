@@ -3,7 +3,8 @@
 ### Models
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
 #### 下载地址
-* [models.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models.zip)
+* [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
+
 ----
 ----
 
