@@ -1,5 +1,17 @@
 # 算法前端配置界面
 ## Container_Npu 
+
+## 算法前端配置界面V2.0.0.3
+*  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.3)
+#### 下载地址
+* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Windows_lib32.zip)
+* [Linux_lib64.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-3-Portable.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.3.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3.exe)
+* [Linux-Portable.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux-Portable.zip)
+* [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux.zip)
+----
+
 ### Models
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
 #### 下载地址
