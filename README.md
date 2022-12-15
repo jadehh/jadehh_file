@@ -1,5 +1,8 @@
 # 算法前端配置界面
-
+## Container_NPUV1.0.2
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.2)
+#### 下载地址
+* [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.2/models_en.zip)
 
 ## 算法前端配置界面V2.0.0.3
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.3)
@@ -18,6 +21,7 @@
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
 #### 下载地址
 * [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
+
 ### conta_ocr
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
 #### 下载地址
