@@ -1,6 +1,8 @@
 # Container_NPU
 ## Container_NPUV1.0.2
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.2)
+#### 下载地址
+* [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.2/models_en.zip)
 
 ## Container_NpuV1.0.1
 ### Models
@@ -8,8 +10,15 @@
 #### 下载地址
 * [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
 
+### conta_ocr
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
 #### 下载地址
-* [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.2/models_en.zip)
+* [config.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.zip)
+* [箱号识别服务NPUV1.0.1.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/NPUV1.0.1.zip)
+* [箱号识别服务ONNXV1.0.1.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/ONNXV1.0.1.zip)
+
+----
+
 # 算法前端配置界面
 ## 算法前端配置界面V2.0.0.3
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.3)
@@ -24,14 +33,6 @@
 
 
 
-### conta_ocr
-* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
-#### 下载地址
-* [config.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.zip)
-* [箱号识别服务NPUV1.0.1.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/NPUV1.0.1.zip)
-* [箱号识别服务ONNXV1.0.1.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/ONNXV1.0.1.zip)
-
-----
 
 
 
