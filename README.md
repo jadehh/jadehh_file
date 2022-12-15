@@ -2,7 +2,7 @@
 ## Container_NPUV1.0.2
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.2)
 
-## Container_NpuV1.0.2
+## Container_NpuV1.0.1
 ### Models
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
 #### 下载地址
