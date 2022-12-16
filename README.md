@@ -1,20 +1,32 @@
 
 ## Container_NpuV1.0.1
 
-### conta_service
-* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
+### models
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
 #### 下载地址
-* [config](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.ini)
 * [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
+* [config](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.ini)
+---
+
+
+### conta_service
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_serviceV1.0.1)
+#### 下载地址
 * [conta_service-onnx.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-onnx.zip)
 * [conta-service-onnx-lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta-service-onnx-lib64.zip)
 * [conta_service-ascend.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-ascend.zip)
 * [conta-service-ascend-lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta-service-ascend-lib64.zip)
+---
 
 ### conta_ocr
-* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
 #### 下载地址
-* [models_en.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
+* [conta_ocr-onnx.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-onnx.zip)
+* [conta-ocr-onnx-lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta-ocr-onnx-lib64.zip)
+* [conta_ocr-ascend.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-ascend.zip)
+* [conta-ocr-ascend-lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta-ocr-ascend-lib64.zip)
+---
+
 
 
 ----
