@@ -33,23 +33,23 @@
 ## 算法前端配置界面V2.0.0.4
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.4)
 #### 下载地址
-* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Windows_lib32.zip)
-* [Linux_lib64.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-4-Portable.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.4.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4.exe)
-* [Linux-Portable.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux-Portable.zip)
-* [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux.zip)
+* [Windows_lib32.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Windows_lib32.zip)
+* [Linux_lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-4-Portable.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.4.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4.exe)
+* [Linux-Portable.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux-Portable.zip)
+* [Linux.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux.zip)
 ----
 
 ## 算法前端配置界面V2.0.0.3
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.3)
 #### 下载地址
-* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Windows_lib32.zip)
-* [Linux_lib64.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-3-Portable.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.3.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3.exe)
-* [Linux-Portable.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux-Portable.zip)
-* [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux.zip)
+* [Windows_lib32.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Windows_lib32.zip)
+* [Linux_lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-3-Portable.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.3.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3.exe)
+* [Linux-Portable.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux-Portable.zip)
+* [Linux.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux.zip)
 ----
 
 
@@ -60,23 +60,23 @@
 ## 算法前端配置界面V2.0.0.2
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.2)
 #### 下载地址
-* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Windows_lib32.zip)
-* [Linux_lib64.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-2-Portable.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.2.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2.exe)
-* [Linux-Portable.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux-Portable.zip)
-* [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux.zip)
+* [Windows_lib32.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Windows_lib32.zip)
+* [Linux_lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-2-Portable.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.2.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2.exe)
+* [Linux-Portable.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux-Portable.zip)
+* [Linux.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux.zip)
 ----
 
 ## 算法前端配置界面V2.0.0.1
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.1)
 #### 下载地址
-* [Windows_lib32.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Windows_lib32.zip)
-* [Linux_lib64.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-1-Portable.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.1.exe](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1.exe)
-* [Linux-Portable.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux-Portable.zip)
-* [Linux.zip](https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux.zip)
+* [Windows_lib32.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Windows_lib32.zip)
+* [Linux_lib64.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-1-Portable.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.1.exe](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1.exe)
+* [Linux-Portable.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux-Portable.zip)
+* [Linux.zip](https://ghproxy.com/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux.zip)
 ----
 
 ## 算法前端配置界面V1.1.2.2
