@@ -4,30 +4,30 @@
 ### models
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/modelsV1.0.1)
 #### 下载地址
-* [models_en.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
-* [config](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.ini)
+* [models_en.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
+* [config](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.ini)
 ---
 
 
 ### conta_service
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_serviceV1.0.1)
 #### 下载地址
-* [conta_service-onnx.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-onnx.zip)
-* [conta_service_x86_64_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service_x86_64_lib64.zip)
-* [conta_service-ascend.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-ascend.zip)
-* [conta_service-rknn.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-rknn.zip)
-* [conta_service_aarch64_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service_aarch64_lib64.zip)
+* [conta_service-onnx.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-onnx.zip)
+* [conta_service_x86_64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service_x86_64_lib64.zip)
+* [conta_service-ascend.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-ascend.zip)
+* [conta_service-rknn.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-rknn.zip)
+* [conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service_aarch64_lib64.zip)
 
 ---
 
 ### conta_ocr
 * [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
 #### 下载地址
-* [conta_ocr-onnx.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-onnx.zip)
-* [conta_ocr_x86_64_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr_x86_64_lib64.zip)
-* [conta_ocr-ascend.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-ascend.zip)
-* [conta_ocr-rknn.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-rknn.zip)
-* [conta_ocr_aarch64_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr_aarch64_lib64.zip)
+* [conta_ocr-onnx.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-onnx.zip)
+* [conta_ocr_x86_64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr_x86_64_lib64.zip)
+* [conta_ocr-ascend.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-ascend.zip)
+* [conta_ocr-rknn.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-rknn.zip)
+* [conta_ocr_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr_aarch64_lib64.zip)
 
 ---
 
@@ -37,34 +37,34 @@
 ## 算法前端配置界面V2.0.0.5
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.5)
 #### 下载地址
-* [Windows_lib32.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Windows_lib32.zip)
-* [Linux_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-5-Portable.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/AlgorithmConfiure_setup-V2.0.0-5-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.5.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/AlgorithmConfiure_setup-V2.0.0-5.exe)
-* [Linux-Portable.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Linux-Portable.zip)
-* [Linux.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Linux.zip)
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-5-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/AlgorithmConfiure_setup-V2.0.0-5-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.5.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/AlgorithmConfiure_setup-V2.0.0-5.exe)
+* [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Linux-Portable.zip)
+* [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.5/Linux.zip)
 ----
 
 ## 算法前端配置界面V2.0.0.4
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.4)
 #### 下载地址
-* [Windows_lib32.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Windows_lib32.zip)
-* [Linux_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-4-Portable.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.4.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4.exe)
-* [Linux-Portable.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux-Portable.zip)
-* [Linux.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux.zip)
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-4-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.4.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/AlgorithmConfiure_setup-V2.0.0-4.exe)
+* [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux-Portable.zip)
+* [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.4/Linux.zip)
 ----
 
 ## 算法前端配置界面V2.0.0.3
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.3)
 #### 下载地址
-* [Windows_lib32.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Windows_lib32.zip)
-* [Linux_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-3-Portable.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.3.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3.exe)
-* [Linux-Portable.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux-Portable.zip)
-* [Linux.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux.zip)
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-3-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.3.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/AlgorithmConfiure_setup-V2.0.0-3.exe)
+* [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux-Portable.zip)
+* [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.3/Linux.zip)
 ----
 
 
@@ -75,23 +75,23 @@
 ## 算法前端配置界面V2.0.0.2
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.2)
 #### 下载地址
-* [Windows_lib32.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Windows_lib32.zip)
-* [Linux_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-2-Portable.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.2.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2.exe)
-* [Linux-Portable.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux-Portable.zip)
-* [Linux.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux.zip)
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-2-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.2.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/AlgorithmConfiure_setup-V2.0.0-2.exe)
+* [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux-Portable.zip)
+* [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.2/Linux.zip)
 ----
 
 ## 算法前端配置界面V2.0.0.1
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.1)
 #### 下载地址
-* [Windows_lib32.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Windows_lib32.zip)
-* [Linux_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-1-Portable.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.1.exe](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1.exe)
-* [Linux-Portable.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux-Portable.zip)
-* [Linux.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux.zip)
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-1-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.1.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/AlgorithmConfiure_setup-V2.0.0-1.exe)
+* [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux-Portable.zip)
+* [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.1/Linux.zip)
 ----
 
 ## 算法前端配置界面V1.1.2.2
