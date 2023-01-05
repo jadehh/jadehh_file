@@ -1,3 +1,33 @@
+## Local_Container_OCRV1.0.1
+### models
+* [发布地址](https://github.com/jadehh/Local_Container_OCR/releases/tag/modelsV1.0.1)
+#### 下载地址
+* [models_en.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/models_en.zip)
+* [config](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/config.ini)
+---
+
+### local_conta_service
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_serviceV1.0.1)
+#### 下载地址
+* [local_conta_service-onnx.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-onnx.zip)
+* [local_conta_service_x86_64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service_x86_64_lib64.zip)
+* [local_conta_service-ascend.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-ascend.zip)
+* [local_conta_service-rknn.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service-rknn.zip)
+* [local_conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_service_aarch64_lib64.zip)
+---
+### local_conta_ocr
+* [发布地址](https://github.com/jadehh/Container_Npu/releases/tag/conta_ocrV1.0.1)
+#### 下载地址
+* [local_conta_ocr-onnx.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-onnx.zip)
+* [local_conta_ocr_x86_64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr_x86_64_lib64.zip)
+* [local_conta_ocr-ascend.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-ascend.zip)
+* [local_conta_ocr-rknn.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr-rknn.zip)
+* [local_conta_ocr_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/Container_NpuV1.0.1/conta_ocr_aarch64_lib64.zip)
+
+---
+
+
+
 
 ## Container_NpuV1.0.1
 
