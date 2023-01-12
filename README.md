@@ -1,3 +1,11 @@
+## ContainerOCR
+### modelsV1.0.2
+模型库
+*[发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.2)
+
+#### 下载地址
+* [pd_models]()
+
 ## Local_Container_OCRV1.0.1
 ### models
 * [发布地址](https://github.com/jadehh/Local_Container_OCR/releases/tag/modelsV1.0.1)
