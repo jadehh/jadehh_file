@@ -1,11 +1,11 @@
 ## ContainerOCRV2.4.8
-### conta_captureV2.4.8.2
-箱号图片抓拍
-* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_captureV2.4.8.2)
+### conta_serviceV2.4.8.2
+箱号服务
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV2.4.8.2)
 ### 下载地址
-* [conta_capture_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.2/conta_capture_lib64.zip)
-* [local_conta_capture_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.2/local_conta_capture_x86_lib64.zip)
-* [local_conta_capture_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.2/local_conta_capture_aarch64_lib64.zip)
+* [conta_service_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.8.2/conta_service_lib64.zip)
+* [local_conta_service_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.8.2/local_conta_service_x86_lib64.zip)
+* [local_conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.8.2/local_conta_service_aarch64_lib64.zip)
 ---
 ### modelsV1.0.2
 模型库
