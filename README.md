@@ -2,6 +2,15 @@
 
 ### modelsV1.0.3
 
+### conta_ocrV2.4.8.3
+箱号图片抓拍
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_ocrV2.4.8.3)
+### 下载地址
+* [conta_ocr_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.3/conta_ocr_lib64.zip)
+* [local_conta_ocr_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.3/local_conta_ocr_x86_lib64.zip)
+* [local_conta_ocr_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.3/local_conta_ocr_aarch64_lib64.zip)
+---
+
 ### conta_captureV2.4.8.4
 箱号图片抓拍
 * [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_captureV2.4.8.4)
