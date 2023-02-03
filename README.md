@@ -201,7 +201,16 @@
 
 
 # 算法前端配置界面
-
+## 算法前端配置界面V2.0.0.8
+*  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.8)
+#### 下载地址
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-V2.0.0-7-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/AlgorithmConfiure_setup-V2.0.0-8-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.7.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/AlgorithmConfiure_setup-V2.0.0-8.exe)
+* [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Linux-Portable.zip)
+* [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Linux.zip)
+----
 
 ## 算法前端配置界面V2.0.0.7
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/v2.0.0.7)
