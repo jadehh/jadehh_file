@@ -1,6 +1,22 @@
 ## ContainerOCRV2.4.8
 
+### modelsV1.0.4
+模型库
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.4)
+#### 下载地址
+* [onnx_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.4/onnx_models.zip)
+* [pd_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.4/pd_models.zip)
+
+---
+
 ### modelsV1.0.3
+模型库
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.3)
+#### 下载地址
+* [onnx_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.3/onnx_models.zip)
+* [om_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.3/om_models.zip)
+* [rknn_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.3/rknn_models.zip)
+---
 
 ### conta_ocrV2.4.8.3
 箱号图片抓拍
@@ -21,13 +37,6 @@
 ---
 
 
-模型库
-* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.3)
-#### 下载地址
-* [onnx_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.3/onnx_models.zip)
-* [om_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.3/om_models.zip)
-* [rknn_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.3/rknn_models.zip)
----
 
 ### conta_serviceV2.4.8.4
 箱号服务
