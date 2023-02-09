@@ -1,5 +1,17 @@
 ## ContainerOCRV2.4.8
 
+### conta_serviceV2.4.8.5
+
+
+### conta_ocrV2.4.8.4
+箱号图片抓拍
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_ocrV2.4.8.4)
+### 下载地址
+* [conta_ocr_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.4/conta_ocr_lib64.zip)
+* [local_conta_ocr_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.4/local_conta_ocr_x86_lib64.zip)
+* [local_conta_ocr_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.4/local_conta_ocr_aarch64_lib64.zip)
+---
+
 ### modelsV1.0.4
 模型库
 * [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.4)
@@ -206,8 +218,8 @@
 #### 下载地址
 * [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Windows_lib32.zip)
 * [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-V2.0.0-7-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/AlgorithmConfiure_setup-V2.0.0-8-Portable.exe)
-* [AlgorithmConfiure_setup-V2.0.0.7.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/AlgorithmConfiure_setup-V2.0.0-8.exe)
+* [AlgorithmConfiure_setup-V2.0.0-8-Portable.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/AlgorithmConfiure_setup-V2.0.0-8-Portable.exe)
+* [AlgorithmConfiure_setup-V2.0.0.8.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/AlgorithmConfiure_setup-V2.0.0-8.exe)
 * [Linux-Portable.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Linux-Portable.zip)
 * [Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfigUIV2.0.0.8/Linux.zip)
 ----
