@@ -1,5 +1,14 @@
 ## ContainerOCRV2.4.8
 
+### conta_captureV2.4.8.5
+箱号图片抓拍
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_captureV2.4.8.5)
+### 下载地址
+* [conta_capture_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.5/conta_capture_lib64.zip)
+* [local_conta_capture_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.5/local_conta_capture_x86_lib64.zip)
+* [local_conta_capture_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.5/local_conta_capture_aarch64_lib64.zip)
+---
+
 ### modelsV1.0.5
 模型库
 * [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.5)
