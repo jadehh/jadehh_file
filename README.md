@@ -25,6 +25,7 @@
 * [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.5)
 #### 下载地址
 * [onnx_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.5/onnx_models.zip)
+* [rknn_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.5/rknn_models.zip)
 ---
 
 ### conta_serviceV2.4.8.5
