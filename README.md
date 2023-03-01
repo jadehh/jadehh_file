@@ -20,6 +20,15 @@
 ## ContainerOCRV2.4.8
 
 
+### modelsV1.0.6
+模型库
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/modelsV1.0.6)
+#### 下载地址
+* [onnx_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.6/onnx_models.zip)
+* [rknn_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.6/rknn_models.zip)
+* [om_models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/ContainerOCRModelsV1.0.6/om_models.zip)
+---
+
 ### conta_serviceV2.4.8.7
 箱号服务
 * [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV2.4.8.7)
