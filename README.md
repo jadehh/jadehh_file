@@ -5,16 +5,48 @@
 视频计数服务
 * [发布地址](https://github.com/jadehh/animal_bayonet_video_count/releases/tag/video_count_serviceV1.0.4)
 ### 下载地址
-[]()
+[video_count_service](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/video_count_serviceV1.0.4/video_count_service)
+[video_count_service_lib64.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/video_count_serviceV1.0.4/video_count_service_lib64.zip)
+
 ---
 
 ### VideoCountModelsV1.0.4
 视频计数服务模型
 * [发布地址](https://github.com/jadehh/animal_bayonet_video_count/releases/tag/modelsV1.0.4)
 ### 下载地址
+* [models.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/VideoCountModelsV1.0.4/models.zip)
 ---
 
 ## ContainerOCRV2.4.8
+
+
+### conta_serviceV2.4.8.7
+箱号服务
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV2.4.8.7)
+### 下载地址
+* [conta_service_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.8.7/conta_service_lib64.zip)
+* [local_conta_service_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.8.7/local_conta_service_x86_lib64.zip)
+* [local_conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.8.7/local_conta_service_aarch64_lib64.zip)
+---
+
+### conta_captureV2.4.8.6
+箱号图片抓拍
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_captureV2.4.8.6)
+### 下载地址
+* [conta_capture_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.6/conta_capture_lib64.zip)
+* [local_conta_capture_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.6/local_conta_capture_x86_lib64.zip)
+* [local_conta_capture_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.6/local_conta_capture_aarch64_lib64.zip)
+---
+
+### conta_ocrV2.4.8.6
+箱号图片抓拍
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_ocrV2.4.8.6)
+### 下载地址
+* [conta_ocr_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.6/conta_ocr_lib64.zip)
+* [local_conta_ocr_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.6/local_conta_ocr_x86_lib64.zip)
+* [local_conta_ocr_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_ocrV2.4.8.6/local_conta_ocr_aarch64_lib64.zip)
+---
+
 
 
 ### conta_serviceV2.4.8.6
