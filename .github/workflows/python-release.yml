@@ -86,7 +86,7 @@ jobs:
       - name: Checkout private tools
         uses: actions/checkout@v3
         with:
-          repository: AlgorithmConfigUI
+          repository: jadehh/AlgorithmConfigUI
           path: AlgorithmConfigUI
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
