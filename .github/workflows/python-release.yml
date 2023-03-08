@@ -6,6 +6,11 @@ on:
 #      - AlgorithmConfigUI*
 
 jobs:
+  plan:
+    permissions:
+      contents: read
+      pull-requests: write
+
 #  release:
 #    name: ${{ matrix.os }} 创建Release
 #    runs-on:  ${{ matrix.os }}
