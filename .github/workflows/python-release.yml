@@ -84,9 +84,9 @@ jobs:
     steps:
       - name: 输出环境变量
         run: |
-          echo secrets.ACCESS_TOKEN
-          echo secrets.PERSONAL_TOKEN
-          echo secrets.GithubApi
+          echo ${{secrets.ACCESS_TOKEN}}
+          echo ${{secrets.PERSONAL_TOKEN}}
+          echo ${{secrets.GithubApi}}
       - name: Checkout
         uses: actions/checkout@v3
         with:
