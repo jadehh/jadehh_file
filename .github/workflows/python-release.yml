@@ -6,27 +6,27 @@ on:
 #      - AlgorithmConfigUI*
 
 jobs:
-  release:
-    name: ${{ matrix.os }} 创建Release
-    runs-on:  ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
-    steps:
-      - name: 克隆代码
-        uses: actions/checkout@v3
-      - name: 创建发行版本
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body_path: README.md
-          draft: false
-          prerelease: false
+#  release:
+#    name: ${{ matrix.os }} 创建Release
+#    runs-on:  ${{ matrix.os }}
+#    strategy:
+#      fail-fast: false
+#      matrix:
+#        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
+#    steps:
+#      - name: 克隆代码
+#        uses: actions/checkout@v3
+#      - name: 创建发行版本
+#        id: create_release
+#        uses: actions/create-release@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+#        with:
+#          tag_name: ${{ github.ref }}
+#          release_name: ${{ github.ref }}
+#          body_path: README.md
+#          draft: false
+#          prerelease: false
 #  windows:
 #    name: 打包发布 (${{ matrix.os }},${{ matrix.architecture}},${{ matrix.python-version }})
 #    runs-on: ${{ matrix.os }}
@@ -83,7 +83,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: pwsh
         run: |
-          git clone https://github.com/jadehh/AlgorithmConfigUI.git
+          git clone https://jadehh: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@github.com/jadehh/AlgorithmConfigUI.git
           ls -l
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
