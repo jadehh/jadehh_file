@@ -52,8 +52,7 @@ jobs:
         run: |
           mv AlgorithmConfigUI/* ./
           rm -r AlgorithmConfigUI
-          ls -l
-      - name: Windows安装Conda环境
+      - name: Windows操作系统安装Conda 32位环境
         if: runner.os == 'Windows'
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -61,7 +60,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: "x86"
           miniconda-version: "latest"
-      - name: 其他操作系统安装Conda环境
+      - name: 其他操作系统安装Conda 64位环境
         if: runner.os != 'Windows'
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -69,30 +68,38 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: "x64"
           miniconda-version: "latest"
-#      - name: 准备打包环境
-#        shell: pwsh
-#        run: |
-#          pip install -r requirements.txt
-#      - name: MacOS打包
-#        shell: pwsh
-#        if: runner.os == 'macOS'
-#        run: |
-#          python packing.py
-#          ls -l
-#          cd releases
-#          ls -l
-#      - name: Linux打包
-#        shell: pwsh
-#        if: runner.os == 'Linux'
-#        run: |
-#          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
-#          mv appimagetool-x86_64.AppImage ~/
-#          chmod a+x ~/appimagetool-x86_64.AppImage
-#          python packing.py
-#      - name: 压缩
-#        shell: pwsh
-#        run: |
-#          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
+      - name: Windows操作系统准备打包环境
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          pip install pywin32
+          pip install -r requirements.txt
+      - name: 其他操作系统准备打包环境
+        if: runner.os != 'Windows'
+        shell: pwsh
+        run: |
+          pip install -r requirements.txt
+      - name: MacOS打包
+        shell: pwsh
+        if: runner.os == 'macOS'
+        run: |
+          python packing.py
+      - name: Linux打包
+        shell: pwsh
+        if: runner.os == 'Linux'
+        run: |
+          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
+          mv appimagetool-x86_64.AppImage ~/
+          chmod a+x ~/appimagetool-x86_64.AppImage
+          python packing.py
+      - name: 压缩
+        shell: pwsh
+        run: |
+          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
+      - name: 测试是否打包完成
+        shell: pwsh
+        run: |
+          ls -l
 #      ## 发布
 #      - name: 发布
 #        uses: softprops/action-gh-release@v1
