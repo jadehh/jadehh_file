@@ -78,12 +78,17 @@ jobs:
         architecture: ["x64"]
         python-version: ["3.6"]
     steps:
-      - uses: actions/checkout@v3
-      - name: Clone私有仓库
-        uses: actions/checkout@v2.4.1
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-          repository: jadehh/AlgorithmConfigUI
-          path: AlgorithmConfigUI
+          path: main
+
+      - name: Checkout private tools
+        uses: actions/checkout@v3
+        with:
+          repository: my-org/my-private-tools
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+          path: my-tools
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
 #        with:
