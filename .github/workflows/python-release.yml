@@ -82,54 +82,45 @@ jobs:
         architecture: ["x64"]
         python-version: ["3.6"]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: main
-      - name: Checkout private tools
+      - name: 下载代码
         uses: actions/checkout@v3
         with:
           repository: jadehh/AlgorithmConfigUI
           ref: 算法前端配置界面
           path: AlgorithmConfigUI
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 测试代码下载是否成功
+      - name: 安装Conda环境
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+          architecture: ${{ matrix.architecture}}
+          miniconda-version: "latest"
+      - name: 准备打包环境
+        shell: pwsh
         run: |
-          ls -l
           cd AlgorithmConfigUI
+          pip install -r requirements.txt
+      - name: MacOS打包
+        shell: pwsh
+        if: runner.os == 'macOS'
+        run: |
+          python packing.py
           ls -l
-#      - name: 安装Conda环境
-#        uses: conda-incubator/setup-miniconda@v2
-#        with:
-#          auto-update-conda: true
-#          python-version: ${{ matrix.python-version }}
-#          architecture: ${{ matrix.architecture}}
-#          miniconda-version: "latest"
-
-#      - name: 准备打包环境
-#        shell: pwsh
-#        run: |
-#          pip install -r requirements.txt
-#      - name: MacOS打包
-#        shell: pwsh
-#        if: runner.os == 'macOS'
-#        run: |
-#          python packing.py
-#          ls -l
-#          cd releases
-#          ls -l
-#      - name: Linux打包
-#        shell: pwsh
-#        if: runner.os == 'Linux'
-#        run: |
-#          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
-#          mv appimagetool-x86_64.AppImage ~/
-#          chmod a+x ~/appimagetool-x86_64.AppImage
-#          python packing.py
-#      - name: 压缩
-#        shell: pwsh
-#        run: |
-#          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
+          cd releases
+          ls -l
+      - name: Linux打包
+        shell: pwsh
+        if: runner.os == 'Linux'
+        run: |
+          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
+          mv appimagetool-x86_64.AppImage ~/
+          chmod a+x ~/appimagetool-x86_64.AppImage
+          python packing.py
+      - name: 压缩
+        shell: pwsh
+        run: |
+          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
 #      ## 发布
 #      - name: 发布
 #        uses: softprops/action-gh-release@v1
