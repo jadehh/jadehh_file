@@ -45,7 +45,7 @@ jobs:
         with:
           repository: jadehh/AlgorithmConfigUI
           ref: 算法前端配置界面
-          path: AlgorithmConfigUI
+          path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: Windows操作系统安装Inno Setup 下载
         if: runner.os == 'Windows'
@@ -55,18 +55,6 @@ jobs:
           path: InnoSetup
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
 
-      - name: Windows操作系统移动文件夹
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: |
-          mv AlgorithmConfigUI/* ./
-          rd AlgorithmConfigUI
-      - name: 其他操作系统移动文件夹
-        if: runner.os != 'Windows'
-        shell: pwsh
-        run: |
-          mv AlgorithmConfigUI/* ./
-          rm -r AlgorithmConfigUI
       - name: Windows操作系统安装Conda 32位环境
         if: runner.os == 'Windows'
         uses: conda-incubator/setup-miniconda@v2
@@ -87,15 +75,13 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          mv InnoSetup/* ./
-          rd InnoSetup
           pip install pywin32
-          pip install -r requirements.txt
+          pip install -r code/requirements.txt
       - name: macOS操作系统准备打包环境
         if: runner.os == 'macOS'
         shell: pwsh
         run: |
-          pip install -r requirements.txt
+          pip install -r code/requirements.txt
       - name: Linux操作系统准备打包环境
         if: runner.os == 'Linux'
         shell: pwsh
@@ -106,9 +92,16 @@ jobs:
       - name: 编译打包
         shell: pwsh
         run: |
-          ls ~ -l
-          python packing.py --specify_files samplesMain.py
-      - name: 压缩
+          dir
+          python code/packing.py --specify_files samplesMain.py
+      - name: Windows操作系统压缩
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          dir
+          InnoSetup/ISCC.exe  *.iss
+      - name: 其他操作系统压缩
+        if: runner.os != 'Windows'
         shell: pwsh
         run: |
           zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
