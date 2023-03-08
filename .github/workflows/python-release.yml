@@ -47,6 +47,13 @@ jobs:
           ref: 算法前端配置界面
           path: AlgorithmConfigUI
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: Windows操作系统安装Inno Setup 下载
+        if: runner.os == 'Windows'
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/InnoSetup
+          path: InnoSetup
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 移动文件夹
         shell: pwsh
         run: |
@@ -72,26 +79,27 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
+          mv InnoSetup/* ./
+          rm -r InnoSetup
           pip install pywin32
           pip install -r requirements.txt
-      - name: 其他操作系统准备打包环境
-        if: runner.os != 'Windows'
+      - name: macOS操作系统准备打包环境
+        if: runner.os == 'macOS'
         shell: pwsh
         run: |
           pip install -r requirements.txt
-      - name: MacOS打包
-        shell: pwsh
-        if: runner.os == 'macOS'
-        run: |
-          python packing.py
-      - name: Linux打包
-        shell: pwsh
+      - name: Linux操作系统准备打包环境
         if: runner.os == 'Linux'
+        shell: pwsh
         run: |
           wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
           chmod a+x ~/appimagetool-x86_64.AppImage
-          python packing.py
+      - name: 编译打包
+        shell: pwsh
+        run: |
+          ls ~ -l
+          python packing.py --specify_files samplesMain.py
       - name: 压缩
         shell: pwsh
         run: |
