@@ -83,7 +83,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: pwsh
         run: |
-          git clone https://jadehh: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@github.com/jadehh/AlgorithmConfigUI.git
+          git clone https://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@github.com/jadehh/AlgorithmConfigUI.git
           ls -l
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
