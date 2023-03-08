@@ -55,7 +55,7 @@ jobs:
           path: InnoSetup
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
 
-      - name:Windows操作系统移动文件夹
+      - name: Windows操作系统移动文件夹
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
