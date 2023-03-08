@@ -89,6 +89,7 @@ jobs:
           repository: jadehh/AlgorithmConfigUI
           ref: 算法前端配置界面
           path: AlgorithmConfigUI
+          token: ${{secrets.GITHUB_TOKEN}}
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
 #        with:
