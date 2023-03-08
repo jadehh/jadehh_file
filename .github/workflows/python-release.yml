@@ -82,11 +82,6 @@ jobs:
         architecture: ["x64"]
         python-version: ["3.6"]
     steps:
-      - name: 输出环境变量
-        run: |
-          echo ${{secrets.ACCESS_TOKEN}}
-          echo ${{secrets.PERSONAL_TOKEN}}
-          echo ${{secrets.GithubApi}}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -95,9 +90,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: jadehh/AlgorithmConfigUI
-          ref: 算法前端配置界面
           path: AlgorithmConfigUI
-          token: ${{secrets.PERSONAL_TOKEN}}
+          token: ${{secrets.GH_PAT}}
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
 #        with:
