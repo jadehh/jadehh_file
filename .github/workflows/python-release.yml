@@ -91,7 +91,7 @@ jobs:
         with:
           repository: jadehh/AlgorithmConfigUI
           path: AlgorithmConfigUI
-          token: ${{secrets.GH_PAT}}
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
 #        with:
