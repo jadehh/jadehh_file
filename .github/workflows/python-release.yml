@@ -28,7 +28,7 @@ jobs:
 #          draft: false
 #          prerelease: false
   other:
-    name: 打包发布 (${{ matrix.os }},${{ matrix.architecture}},${{ matrix.python-version }})
+    name: 打包发布-操作系统版本:(${{ matrix.os }},Python版本:${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
     permissions:
       contents: read
@@ -54,61 +54,71 @@ jobs:
           repository: jadehh/InnoSetup
           path: InnoSetup
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-
-      - name: Windows操作系统安装Conda 32位环境
-        if: runner.os == 'Windows'
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
-          architecture: "x86"
-          miniconda-version: "latest"
-      - name: 其他操作系统安装Conda 64位环境
-        if: runner.os != 'Windows'
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
-          architecture: "x64"
-          miniconda-version: "latest"
-      - name: Windows操作系统准备打包环境
-        if: runner.os == 'Windows'
+      - name: 测试代码下载是否完成
         shell: pwsh
         run: |
-          pip install pywin32
-          pip install -r code/requirements.txt
-      - name: macOS操作系统准备打包环境
-        if: runner.os == 'macOS'
-        shell: pwsh
-        run: |
-          pip install -r code/requirements.txt
-      - name: Linux操作系统准备打包环境
-        if: runner.os == 'Linux'
-        shell: pwsh
-        run: |
-          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
-          mv appimagetool-x86_64.AppImage ~/
-          chmod a+x ~/appimagetool-x86_64.AppImage
-      - name: 编译打包
-        shell: pwsh
-        run: |
+          cd code
           dir
-          python code/packing.py --specify_files samplesMain.py
-      - name: Windows操作系统压缩
-        if: runner.os == 'Windows'
+      - name: 测试Inno Setup下载是否完成
         shell: pwsh
         run: |
+          cd InnoSetup
           dir
-          InnoSetup/ISCC.exe  *.iss
-      - name: 其他操作系统压缩
-        if: runner.os != 'Windows'
-        shell: pwsh
-        run: |
-          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
-      - name: 测试是否打包完成
-        shell: pwsh
-        run: |
-          dir
+#
+#      - name: Windows操作系统安装Conda 32位环境
+#        if: runner.os == 'Windows'
+#        uses: conda-incubator/setup-miniconda@v2
+#        with:
+#          auto-update-conda: true
+#          python-version: ${{ matrix.python-version }}
+#          architecture: "x86"
+#          miniconda-version: "latest"
+#      - name: 其他操作系统安装Conda 64位环境
+#        if: runner.os != 'Windows'
+#        uses: conda-incubator/setup-miniconda@v2
+#        with:
+#          auto-update-conda: true
+#          python-version: ${{ matrix.python-version }}
+#          architecture: "x64"
+#          miniconda-version: "latest"
+#      - name: Windows操作系统准备打包环境
+#        if: runner.os == 'Windows'
+#        shell: pwsh
+#        run: |
+#          pip install pywin32
+#          pip install -r code/requirements.txt
+#      - name: macOS操作系统准备打包环境
+#        if: runner.os == 'macOS'
+#        shell: pwsh
+#        run: |
+#          pip install -r code/requirements.txt
+#      - name: Linux操作系统准备打包环境
+#        if: runner.os == 'Linux'
+#        shell: pwsh
+#        run: |
+#          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
+#          mv appimagetool-x86_64.AppImage ~/
+#          chmod a+x ~/appimagetool-x86_64.AppImage
+#      - name: 编译打包
+#        shell: pwsh
+#        run: |
+#          cd code
+#          python packing.py --specify_files samplesMain.py
+#      - name: Windows操作系统压缩
+#        if: runner.os == 'Windows'
+#        shell: pwsh
+#        run: |
+#          dir
+#          InnoSetup/ISCC.exe  *.iss
+#      - name: 其他操作系统压缩
+#        if: runner.os != 'Windows'
+#        shell: pwsh
+#        run: |
+#          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
+#      - name: 测试是否打包完成
+#        shell: pwsh
+#        run: |
+#          dir
 #      ## 发布
 #      - name: 发布
 #        uses: softprops/action-gh-release@v1
