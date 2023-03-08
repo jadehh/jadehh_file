@@ -54,7 +54,15 @@ jobs:
           repository: jadehh/InnoSetup
           path: InnoSetup
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 移动文件夹
+
+      - name:Windows操作系统移动文件夹
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          mv AlgorithmConfigUI/* ./
+          rd AlgorithmConfigUI
+      - name: 其他操作系统移动文件夹
+        if: runner.os != 'Windows'
         shell: pwsh
         run: |
           mv AlgorithmConfigUI/* ./
@@ -80,7 +88,7 @@ jobs:
         shell: pwsh
         run: |
           mv InnoSetup/* ./
-          rm -r InnoSetup
+          rd InnoSetup
           pip install pywin32
           pip install -r requirements.txt
       - name: macOS操作系统准备打包环境
