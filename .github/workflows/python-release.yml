@@ -82,9 +82,6 @@ jobs:
         architecture: ["x64"]
         python-version: ["3.6"]
     steps:
-      - name: 输出环境变量
-        run : |
-          echo ${{ secrets.GH_PAT }}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -95,6 +92,9 @@ jobs:
           repository: jadehh/AlgorithmConfigUI
           path: AlgorithmConfigUI
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: 测试代码下载是否成功
+        run: |
+          ls -l
 #      - name: 安装Conda环境
 #        uses: conda-incubator/setup-miniconda@v2
 #        with:
