@@ -2,8 +2,8 @@ name: 算法前端配置界面发布
 
 on:
   push:
-    tags:
-      - AlgorithmConfigUI*
+#    tags:
+#      - AlgorithmConfigUI*
 
 jobs:
   release:
