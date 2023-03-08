@@ -78,7 +78,6 @@ jobs:
         architecture: ["x64"]
         python-version: ["3.6"]
     steps:
-      - name: Clone私有仓库
       - uses: actions/checkout@v3
       - name: Clone私有仓库
         uses: actions/checkout@v2.4.1
