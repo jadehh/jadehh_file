@@ -100,18 +100,17 @@ jobs:
           cd code/Output
           ls
       ## 上传文件
-      - name: 上传文件
-        uses: actions/upload-artifact@v2
-        with:
-          name: Output
-          path: code/Output
+#      - name: 上传文件
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: Output
+#          path: code/Output
       # 发布
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: |
-            "Output/*.exe"
-            "Output/*.zip"
+          files:
+            ./code/Output/*
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
