@@ -86,14 +86,14 @@ jobs:
         shell: pwsh
         run: |
           pip install -r code/requirements.txt
-          wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
+          wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
           chmod a+x ~/appimagetool-x86_64.AppImage
       - name: 编译打包
         shell: pwsh
         run: |
           cd code
-          python packing.py --specify_files samplesMain.py
+          python packing.py
       - name: 测试是否打包完成
         shell: pwsh
         run: |
