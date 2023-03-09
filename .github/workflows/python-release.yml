@@ -2,31 +2,31 @@ name: 算法前端配置界面发布
 
 on:
   push:
-#    tags:
-#      - AlgorithmConfigUI*
+    tags:
+      - AlgorithmConfigUI*
 
 jobs:
-#  release:
-#    name: ${{ matrix.os }} 创建Release
-#    runs-on:  ${{ matrix.os }}
-#    strategy:
-#      fail-fast: false
-#      matrix:
-#        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
-#    steps:
-#      - name: 克隆代码
-#        uses: actions/checkout@v3
-#      - name: 创建发行版本
-#        id: create_release
-#        uses: actions/create-release@v1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-#        with:
-#          tag_name: ${{ github.ref }}
-#          release_name: ${{ github.ref }}
-#          body_path: README.md
-#          draft: false
-#          prerelease: false
+  release:
+    name: ${{ matrix.os }} 创建Release
+    runs-on:  ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
+    steps:
+      - name: 克隆代码
+        uses: actions/checkout@v3
+      - name: 创建发行版本
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: README.md
+          draft: false
+          prerelease: false
   other:
     name: 打包发布-操作系统版本:(${{ matrix.os }},Python版本:${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
@@ -93,26 +93,16 @@ jobs:
         run: |
           cd code
           python packing.py --specify_files samplesMain.py
-      - name: Windows操作系统压缩
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: |
-          dir
-          InnoSetup/ISCC.exe  code/*.iss
-      - name: 其他操作系统压缩
-        if: runner.os != 'Windows'
-        shell: pwsh
-        run: |
-          zip -r ${{runner.os}}.zip  releases/*/${{runner.os}}/
       - name: 测试是否打包完成
         shell: pwsh
         run: |
-          dir
+          cd Output
+          ls
       ## 发布
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: AlgorithmConfigUI/${{runner.os}}.zip
+          files: Output/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
