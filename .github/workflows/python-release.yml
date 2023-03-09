@@ -47,13 +47,13 @@ jobs:
           ref: 算法前端配置界面
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: Windows操作系统安装Inno Setup 下载
-        if: runner.os == 'Windows'
-        uses: actions/checkout@v3
-        with:
-          repository: jadehh/InnoSetup
-          path: InnoSetup
-          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+#      - name: Windows操作系统安装Inno Setup 下载
+#        if: runner.os == 'Windows'
+#        uses: actions/checkout@v3
+#        with:
+#          repository: jadehh/InnoSetup
+#          path: InnoSetup
+#          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: Windows操作系统安装Conda 32位环境
         if: runner.os == 'Windows'
         uses: conda-incubator/setup-miniconda@v2
