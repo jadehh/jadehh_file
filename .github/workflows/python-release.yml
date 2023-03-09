@@ -100,7 +100,7 @@ jobs:
       - name: 测试是否打包完成
         shell: pwsh
         run: |
-          cd Output
+          cd code/Output
           ls
       ## 发布
 #      - name: 发布
