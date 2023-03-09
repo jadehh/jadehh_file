@@ -110,6 +110,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: "Output/*"
+          files: |
+            "Output/*.exe"
+            "Output/*.zip"
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
