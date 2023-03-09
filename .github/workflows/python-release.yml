@@ -58,13 +58,13 @@ jobs:
         if: runner.os == 'Windows'
         uses: actions/setup-python@v3
         with:
-          python-version: "3.6"
+          python-version: ${{ matrix.python-version }}
           architecture: x86
       - name: 其他操作系统准备Python3.6 X64环境
         if: runner.os != 'Windows'
         uses: actions/setup-python@v3
         with:
-          python-version: "3.6"
+          python-version: ${{ matrix.python-version }}
           architecture: x64
       - name: 安装pip环境和三方库
         shell: pwsh
