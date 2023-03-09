@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["macos-latest", "windows-latest","ubuntu-18.04"] #, "macos-latest", "windows-latest","ubuntu-18.04"
+        os: ["ubuntu-18.04"] #, "macos-latest", "windows-latest","ubuntu-18.04"
         python-version: ["3.6"]
     steps:
       - name: 下载代码
@@ -74,17 +74,20 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
+          ls
           pip install pywin32
           pip install -r code/requirements.txt
       - name: macOS操作系统准备打包环境
         if: runner.os == 'macOS'
         shell: pwsh
         run: |
+          ls
           pip install -r code/requirements.txt
       - name: Linux操作系统准备打包环境
         if: runner.os == 'Linux'
         shell: pwsh
         run: |
+          ls
           pip install -r code/requirements.txt
           wget https://github.com/jadehh/jadehh_file/releases/download/conta_captureV2.4.8.7/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
