@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-18.04"] #, "macos-latest", "windows-latest","ubuntu-18.04"
+        os: ["macos-latest", "windows-latest","ubuntu-18.04"] # "macos-latest", "windows-latest","ubuntu-18.04"
         python-version: ["3.6"]
     steps:
       - name: 下载代码
