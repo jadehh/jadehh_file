@@ -37,7 +37,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-18.04", "windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
+        os: ["windows-latest"] # "ubuntu-18.04", "windows-l
+        #os: ["ubuntu-18.04", "windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
         python-version: ["3.6"]
     steps:
       - name: 下载代码
@@ -95,7 +96,7 @@ jobs:
         shell: pwsh
         run: |
           cd code
-          python packing.py ## --specify_files samplesMain.py
+          python packing.py  --specify_files samplesMain.py
       - name: 测试是否打包完成
         shell: pwsh
         run: |
