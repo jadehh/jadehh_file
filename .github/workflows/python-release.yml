@@ -90,6 +90,8 @@ jobs:
           mv appimagetool-x86_64.AppImage ~/
           chmod a+x ~/appimagetool-x86_64.AppImage
       - name: 编译打包
+        env:
+          PYTHONIOENCODING: "utf-8"
         shell: pwsh
         run: |
           cd code
