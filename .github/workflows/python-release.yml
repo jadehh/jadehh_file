@@ -28,7 +28,7 @@ jobs:
 #          draft: false
 #          prerelease: false
   build:
-    runs-on: ubuntu-latest
+    runs-on:  buildjet-4vcpu-ubuntu-2204-arm
     strategy:
       matrix:
         arch:
