@@ -96,7 +96,7 @@ jobs:
         shell: pwsh
         run: |
           cd code
-          python packing.py  --specify_files samplesMain.py
+          python packing.py   # --specify_files samplesMain.py
       - name: 测试是否打包完成
         shell: pwsh
         run: |
