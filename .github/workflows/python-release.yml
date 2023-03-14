@@ -29,7 +29,7 @@ jobs:
 #          prerelease: false
   Linux_Amd64:
     name: ${{ matrix.os }} 箱号服务打包
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: 准备Python环境
         uses: actions/setup-python@v3
