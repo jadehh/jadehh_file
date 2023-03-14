@@ -23,7 +23,7 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 查看代码
         run: |
-          ls ${PWD}
+          ls -l
       - name: 使用Docker打包编译
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
