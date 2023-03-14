@@ -56,7 +56,7 @@ jobs:
                  --extra_sys_str /usr/local/conta_detect-1.0/python_lib \
                  --name 箱号服务
       - name: ONNX打包编译
-         if: ${{ matrix.device_type=='ONNX'}}
+        if: ${{ matrix.device_type=='ONNX'}}
         run: |
           cd code
           python packing_app.py \
