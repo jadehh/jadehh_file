@@ -27,11 +27,17 @@ jobs:
           body_path: README.md
           draft: false
           prerelease: false
+
   Linux_Amd64:
-    name:  箱号服务打包
+    name:  ${{ matrix.device_type }}箱号服务打包
     container:
       image: jadehh/container_ocr:amd64-packing-1.0.1
-    runs-on: ubuntu-18.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+        device_type: ["ONNX"]
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
