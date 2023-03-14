@@ -6,7 +6,7 @@ on:
 #      - conta_serviceV*
 
 jobs:
-  release:
+  Linux_Amd64:
     name: ${{ matrix.os }} 箱号服务发布
     runs-on: ubuntu-latest
     container:
@@ -29,5 +29,5 @@ jobs:
 
       - name: 查看是否打包编译完成
         run: |
-          cd code/releases/*
+          cd code/Output
           ls -l
