@@ -24,6 +24,7 @@ jobs:
       - name: 查看代码
         run: |
           cat code/README.md
+          ls ${PWD}
       - name: 使用Docker打包编译
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
