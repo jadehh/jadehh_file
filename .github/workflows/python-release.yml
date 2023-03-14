@@ -2,8 +2,8 @@ name: 箱号服务发布
 
 on:
   push:
-    tags:
-      - conta_serviceV*
+#    tags:
+#      - conta_serviceV*
 
 jobs:
   release:
