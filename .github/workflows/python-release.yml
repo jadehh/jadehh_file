@@ -21,12 +21,12 @@ jobs:
           ref: 箱号服务
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 查看代码
-        run: |
-          ls -l
       - name: 使用Docker打包编译
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
           docker run -v ${PWD}:/root/jade -d python:3.6.9  bash -c "nohup pip install -r /root/jade/code/requirements.txt >> /root/jade/output.txt 2>&1 "
-          cat ${PWD}/output.txt
 
+      - name: 查看Docker打包编译日志
+        run: |
+          ls -l
+          cat output.txt
