@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: python:3.6.9
-      env:
-        NODE_ENV: development
-      volumes:
-        - /home/runner:/root/jade
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
