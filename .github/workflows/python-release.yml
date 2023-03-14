@@ -21,3 +21,13 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 安装pip环境
         run: pip install -r code/requirements.txt
+
+      - name: 打包编译
+        run: |
+          cd code
+          python packing_app.py
+
+      - name: 查看是否打包编译完成
+        run: |
+          cd code
+          ls -l
