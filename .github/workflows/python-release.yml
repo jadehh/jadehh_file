@@ -6,36 +6,28 @@ on:
 #      - conta_serviceV*
 
 jobs:
-#  release:
-#    name: ${{ matrix.os }} 创建Release
-#    runs-on:  ${{ matrix.os }}
-#    strategy:
-#      fail-fast: false
-#      matrix:
-#        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
-#    steps:
-#      - name: 克隆代码
-#        uses: actions/checkout@v3
-#      - name: 创建发行版本
-#        id: create_release
-#        uses: actions/create-release@v1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-#        with:
-#          tag_name: ${{ github.ref }}
-#          release_name: ${{ github.ref }}
-#          body_path: README.md
-#          draft: false
-#          prerelease: false
-  build:
-    runs-on:  buildjet-4vcpu-ubuntu-2204-arm
+  release:
+    name: ${{ matrix.os }} 创建Release
+    runs-on:  ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        arch:
-          - arm64
-          - x64
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
     steps:
-      - name: 查看系统环境
-        shell: pwsh
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/ContainerOCR
+          ref: conta_service
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: 查看代码
         run: |
-          uname -a
+          cat code/README.md
+      - name: 打包编译
+        # Echo the `uname` output parameter from the `runcmd` step
+        run: |
+          docker ps -a
+          docker run -v ${PWD}:/root/jade -d jadehh/container_ocr:amd64-packing-1.0.1 bash -c "nohup /root/miniconda3/envs/python3.6.9/bin/pip install -r /root/jade/code/requirements.txt >> /root/jade/output.txt 2>&1 "
+          cat  ${PWD}/output.txt
+
