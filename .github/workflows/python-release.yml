@@ -8,11 +8,13 @@ on:
 jobs:
   release:
     name: ${{ matrix.os }} 箱号服务发布
-    runs-on:  ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.6.9
+      env:
+        NODE_ENV: development
+      volumes:
+        - /home/runner:/root/jade
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
@@ -21,12 +23,5 @@ jobs:
           ref: 箱号服务
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 使用Docker打包编译
-        # Echo the `uname` output parameter from the `runcmd` step
-        run: |
-          docker run -v ${PWD}:/root/jade -d python:3.6.9  bash -c "nohup pip install -r /root/jade/code/requirements.txt >> /root/jade/output.txt 2>&1 "
-
-      - name: 查看Docker打包编译日志
-        run: |
-          ls -l
-          cat output.txt
+      - name: 安装pip环境
+        run: pip install code/requirements.txt
