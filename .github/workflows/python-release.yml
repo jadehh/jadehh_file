@@ -29,5 +29,5 @@ jobs:
 
       - name: 查看是否打包编译完成
         run: |
-          cd code
+          cd code/releases/*
           ls -l
