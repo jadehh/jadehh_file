@@ -53,15 +53,13 @@ jobs:
         run: |
           cd code
           python packing_app.py \
-                 --extra_sys_str /usr/local/conta_detect-1.0/python_lib \
-                 --name 箱号服务
+                 --extra_sys_str /usr/local/conta_detect-1.0/python_lib
       - name: ONNX打包编译
         if: ${{ matrix.device_type=='ONNX'}}
         run: |
           cd code
           python packing_app.py \
                  --extra_sys_str /usr/local/site-packages \
-                 --name 箱号服务ONNX \
                  --app_name local_conta_service_onnx \
                  --lib_path local_conta_service_x86_lib64
       - name: 查看是否打包编译完成
