@@ -24,10 +24,9 @@ jobs:
       - name: 查看代码
         run: |
           cat code/README.md
-      - name: 打包编译
+      - name: 使用Docker打包编译
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
-          docker ps -a
-          docker run -v ${PWD}:/root/jade -d jadehh/container_ocr:amd64-packing-1.0.1 bash -c "nohup /root/miniconda3/envs/python3.6.9/bin/pip install -r /root/jade/code/requirements.txt >> /root/jade/output.txt 2>&1 "
-          cat  ${PWD}/output.txt
+          docker run -v ${PWD}:/root/jade -d python:3.6.9  bash -c "nohup pip install -r /root/jade/code/requirements.txt >> /root/jade/output.txt 2>&1 "
+          cat ${PWD}/output.txt
 
