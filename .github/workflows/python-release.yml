@@ -33,8 +33,8 @@ jobs:
     steps:
       - name: 准备Python环境
         uses: actions/setup-python@v3
-          with:
-            python-version: 3.6.9
+        with:
+          python-version: 3.6.9
       - name: 测试Python环境
         run: Python -V
 #      - name: 下载代码
