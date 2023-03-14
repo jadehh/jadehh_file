@@ -49,14 +49,14 @@ jobs:
       - name: 安装pip环境
         run: pip install -r code/requirements.txt
       - name: Paddle打包编译
-        if: ${{ matrix.device_type }} == 'Paddle'
+        if: ${{ matrix.device_type=='Paddle'}}
         run: |
           cd code
           python packing_app.py \
                  --extra_sys_str /usr/local/conta_detect-1.0/python_lib \
                  --name 箱号服务
       - name: ONNX打包编译
-        if: ${{ matrix.device_type }} == 'ONNX'
+         if: ${{ matrix.device_type=='ONNX'}}
         run: |
           cd code
           python packing_app.py \
