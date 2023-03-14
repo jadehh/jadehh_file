@@ -36,7 +36,10 @@ jobs:
         with:
           python-version: 3.6.9
       - name: 测试Python环境
-        run: python -V
+        run: |
+          python -v
+          python
+
 #      - name: 下载代码
 #        uses: actions/checkout@v3
 #        with:
