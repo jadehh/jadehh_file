@@ -81,11 +81,11 @@ jobs:
     # The host should always be Linux
     name: ${{ matrix.device_type }}箱号服务打包
     runs-on: ${{ matrix.os }}
-      strategy:
-        fail-fast: false
-        matrix:
-        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
-        device_type: ["RKNN","Ascend"]
+    strategy:
+      fail-fast: false
+      matrix:
+      os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+      device_type: ["RKNN","Ascend"]
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
