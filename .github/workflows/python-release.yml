@@ -84,8 +84,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-      os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
-      device_type: ["RKNN"]
+        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+        device_type: ["RKNN"]
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
@@ -94,6 +94,7 @@ jobs:
           ref: 箱号服务
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      if: ${{ matrix.device_type=='RKNN'}}
       - name: RKNN打包环境准备
         uses: uraimo/run-on-arch-action@v2
         id: build
