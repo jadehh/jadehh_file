@@ -94,7 +94,6 @@ jobs:
           ref: 箱号服务
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      if: ${{ matrix.device_type=='RKNN'}}
       - name: RKNN打包环境准备
         uses: uraimo/run-on-arch-action@v2
         id: build
