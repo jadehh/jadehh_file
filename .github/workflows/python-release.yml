@@ -92,7 +92,6 @@ jobs:
       - name: RKNN打包环境准备
         if: ${{ matrix.device_type=='RKNN'}}
         uses: uraimo/run-on-arch-action@v2
-        id: rknn build
         with:
           arch: aarch64
           distro: ubuntu18.04
@@ -114,7 +113,6 @@ jobs:
       - name: Ascend打包环境准备
         if: ${{ matrix.device_type=='Ascend'}}
         uses: uraimo/run-on-arch-action@v2
-        id: ascend build
         with:
           arch: aarch64
           distro: ubuntu18.04
