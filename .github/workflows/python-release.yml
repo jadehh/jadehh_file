@@ -85,7 +85,7 @@ jobs:
       fail-fast: false
       matrix:
       os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
-      device_type: ["RKNN","Ascend"]
+      device_type: ["RKNN"]
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
