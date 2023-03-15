@@ -107,16 +107,17 @@ jobs:
           githubToken: ${{ github.token }}
           dockerRunArgs: |
             --volume "${PWD}/code:/code"
-          base_image: jadehh/container_ocr:rknn-packing-1.0.2
+          base_image: jadehh/miniconda3:aarch64-4.9.2
           # Set an output parameter `uname` for use in subsequent steps
           run: |
             cd /code
+            pip install -r requirements.txt
             python packing_app.py \
                    --extra_sys_str /usr/local/site-packages \
                    --app_name local_conta_service_rknn \
                    --lib_path local_conta_service_aarch64_lib64
 
-      - name: 获取输出
+      - name: 获取打包结果
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
-          cat code/output.txt
+          ls code/Output
