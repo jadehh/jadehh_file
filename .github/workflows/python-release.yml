@@ -1,4 +1,4 @@
-name: 箱号服务发布
+name: 箱号图片抓拍发布
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: 箱号服务发布
+    name: 箱号图片抓拍发布
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -29,7 +29,7 @@ jobs:
           prerelease: false
 
   amd64_job:
-    name:  ${{ matrix.device_type }}箱号服务打包
+    name:  ${{ matrix.device_type }}箱号图片抓拍打包
     container:
       image: jadehh/container_ocr:amd64-packing-1.0.1
     runs-on: ${{ matrix.os }}
@@ -75,7 +75,7 @@ jobs:
 
   aarch64_job:
     # The host should always be Linux
-    name: ${{ matrix.device_type }}箱号服务打包
+    name: ${{ matrix.device_type }}箱号图片抓拍打包
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
