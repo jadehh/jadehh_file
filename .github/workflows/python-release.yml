@@ -28,50 +28,50 @@ jobs:
           draft: false
           prerelease: false
 
-  amd64_job:
-    name:  ${{ matrix.device_type }}箱号服务打包
-    container:
-      image: jadehh/container_ocr:amd64-packing-1.0.1
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
-        device_type: ["ONNX","Paddle"]
-    steps:
-      - name: 下载代码
-        uses: actions/checkout@v3
-        with:
-          repository: jadehh/ContainerOCR
-          ref: 箱号图片抓拍
-          path: code
-          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 安装pip环境
-        run: pip install -r code/requirements.txt
-      - name: Paddle打包编译
-        if: ${{ matrix.device_type=='Paddle'}}
-        run: |
-          cd code
-          pip install -r requirements/Paddle/requirements.txt
-          python packing_app.py \
-                --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n"
-      - name: ONNX打包编译
-        if: ${{ matrix.device_type=='ONNX'}}
-        run: |
-          cd code
-          pip install -r requirements/ONNX/requirements.txt
-          python packing_app.py --extra_sys_str /usr/local/site-packages \
-                 --app_name local_conta_capture_onnx \
-                 --lib_path local_conta_capture_x86_lib64
-
-      - name: 发布
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files:
-            "code/Output/*"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+#  amd64_job:
+#    name:  ${{ matrix.device_type }}箱号服务打包
+#    container:
+#      image: jadehh/container_ocr:amd64-packing-1.0.1
+#    runs-on: ${{ matrix.os }}
+#    strategy:
+#      fail-fast: false
+#      matrix:
+#        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+#        device_type: ["ONNX","Paddle"]
+#    steps:
+#      - name: 下载代码
+#        uses: actions/checkout@v3
+#        with:
+#          repository: jadehh/ContainerOCR
+#          ref: 箱号图片抓拍
+#          path: code
+#          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+#      - name: 安装pip环境
+#        run: pip install -r code/requirements.txt
+#      - name: Paddle打包编译
+#        if: ${{ matrix.device_type=='Paddle'}}
+#        run: |
+#          cd code
+#          pip install -r requirements/Paddle/requirements.txt
+#          python packing_app.py \
+#                --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n"
+#      - name: ONNX打包编译
+#        if: ${{ matrix.device_type=='ONNX'}}
+#        run: |
+#          cd code
+#          pip install -r requirements/ONNX/requirements.txt
+#          python packing_app.py --extra_sys_str /usr/local/site-packages \
+#                 --app_name local_conta_capture_onnx \
+#                 --lib_path local_conta_capture_x86_lib64
+#
+#      - name: 发布
+#        uses: softprops/action-gh-release@v1
+#        if: startsWith(github.ref, 'refs/tags/')
+#        with:
+#          files:
+#            "code/Output/*"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
 
   aarch64_job:
     # The host should always be Linux
