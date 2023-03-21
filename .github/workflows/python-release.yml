@@ -110,8 +110,9 @@ jobs:
             ls requirements/RKNN/requirements.txt -l
             pip install -r requirements/RKNN/requirements.txt
             python packing_app.py \
-                   --head_str "import sys \nsys.path.append('/usr/local/Ascend/nnrt/latest/python/site-packages')\nsys.path.append('/usr/local/site-packages')\nfrom acllite.acllite_model import AclLiteModel\nfrom acllite.acllite_imageproc import AclLiteImageProc\nfrom acllite.acllite_image import AclLiteImage\nfrom acllite.acllite_resource import AclLiteResource\n" \
-                   --app_name local_conta_capture_ascend \
+                   --head_str \
+                   "import sys \nsys.path.append('/usr/local/site-packages/')\nimport ruamel\nimport ruamel.yaml\nimport scipy\nimport scipy.spatial\nimport absl\nimport absl.logging\nimport google\nimport google.protobuf\nimport google.protobuf.descriptor\nimport wrapt\nimport google.protobuf.any_pb2\nimport absl.app\nimport  google.protobuf.wrappers_pb2\nimport opt_einsum\nimport gast\nimport astunparse\nimport termcolor\nimport google.protobuf.json_format\nimport absl.testing\nimport absl.testing.parameterized\nimport flatbuffers\nimport requests\nimport h5py\nimport lmdb\nimport sklearn\nimport networkx\nimport onnx.numpy_helper\nimport onnx.backend\nimport onnx.backend.base\nimport ply\nimport ply.lex\nimport ply.yacc\nimport dill\n" \
+                   --app_name local_conta_capture_rknn \
                    --lib_path local_conta_capture_aarch64_lib64
       - name: Ascend打包环境准备
         if: ${{ matrix.device_type=='Ascend'}}
@@ -133,10 +134,9 @@ jobs:
             pip install -r requirements.txt
             pip install -r requirements/Ascend/requirements.txt
             python packing_app.py \
-                   --head_str \
-                    "import sys \nsys.path.append('/usr/local/site-packages/')\nimport ruamel\nimport ruamel.yaml\nimport scipy\nimport scipy.spatial\nimport absl\nimport absl.logging\nimport google\nimport google.protobuf\nimport google.protobuf.descriptor\nimport wrapt\nimport google.protobuf.any_pb2\nimport absl.app\nimport  google.protobuf.wrappers_pb2\nimport opt_einsum\nimport gast\nimport astunparse\nimport termcolor\nimport google.protobuf.json_format\nimport absl.testing\nimport absl.testing.parameterized\nimport flatbuffers\nimport requests\nimport h5py\nimport lmdb\nimport sklearn\nimport networkx\nimport onnx.numpy_helper\nimport onnx.backend\nimport onnx.backend.base\nimport ply\nimport ply.lex\nimport ply.yacc\nimport dill\n" \
-                    --app_name local_conta_capture_rknn \
-                    --lib_path local_conta_capture_aarch64_lib64
+                  --head_str "import sys \nsys.path.append('/usr/local/Ascend/nnrt/latest/python/site-packages')\nsys.path.append('/usr/local/site-packages')\nfrom acllite.acllite_model import AclLiteModel\nfrom acllite.acllite_imageproc import AclLiteImageProc\nfrom acllite.acllite_image import AclLiteImage\nfrom acllite.acllite_resource import AclLiteResource\n" \
+                  --app_name local_conta_capture_ascend \
+                  --lib_path local_conta_capture_aarch64_lib64
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
