@@ -11,4 +11,4 @@ AlgorithmConfiureV2.0.1.7
 * [AlgorithmConfiure-V2.0.1-7-Portable-Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/downloadAlgorithmConfiureV2.0.1.7/Linux-Portable.zip)
 * [AlgorithmConfiure-V2.0.1-7-Linux.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/downloadAlgorithmConfiureV2.0.1.7/Linux.zip)
 * [AlgorithmConfiure-V2.0.1-7-Portable--Darwin.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/downloadAlgorithmConfiureV2.0.1.7/Linux-Portable.zip)
-----
+-----
