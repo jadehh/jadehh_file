@@ -39,7 +39,7 @@ jobs:
       matrix:
 #        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest
         os: ["ubuntu-latest", "windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
-        python-version: ["3.6"]
+        python-version: ["3.10"]
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
