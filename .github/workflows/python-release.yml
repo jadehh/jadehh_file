@@ -87,6 +87,7 @@ jobs:
         shell: pwsh
         run: |
           pip install -r code/requirements.txt
+          apt install libfuse2
           wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
           chmod a+x ~/appimagetool-x86_64.AppImage
