@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: jadehh/AlgorithmConfigUI
-          ref: AlgorithmConfigUI
+          ref: AlgorithmConfiure
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: Windows操作系统安装Inno Setup 下载
