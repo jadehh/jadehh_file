@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: jadehh/ContainerOCR
-          ref: 箱号识别服务
+          ref: conta_ocr
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 安装pip环境
@@ -52,18 +52,16 @@ jobs:
         if: ${{ matrix.device_type=='Paddle'}}
         run: |
           cd code
-          pip install -r requirements/Paddle/requirements.txt
           python packing_app.py \
-                --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n"
+                 --extra_sys_str /usr/local/conta_detect-1.0/python_lib
       - name: ONNX打包编译
         if: ${{ matrix.device_type=='ONNX'}}
         run: |
           cd code
-          pip install -r requirements/ONNX/requirements.txt
-          python packing_app.py --extra_sys_str /usr/local/site-packages \
+          python packing_app.py \
+                 --extra_sys_str /usr/local/site-packages \
                  --app_name local_conta_ocr_onnx \
                  --lib_path local_conta_ocr_x86_lib64
-
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -87,7 +85,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: jadehh/ContainerOCR
-          ref: 箱号识别服务
+          ref: conta_ocr
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: RKNN打包环境准备
@@ -107,11 +105,8 @@ jobs:
           run: |
             cd /code
             pip install -r requirements.txt
-            ls requirements/RKNN/requirements.txt -l
-            pip install -r requirements/RKNN/requirements.txt
             python packing_app.py \
-                   --head_str \
-                   "import sys \nsys.path.append('/usr/local/site-packages/')\nimport ruamel\nimport ruamel.yaml\nimport scipy\nimport scipy.spatial\nimport absl\nimport absl.logging\nimport google\nimport google.protobuf\nimport google.protobuf.descriptor\nimport wrapt\nimport google.protobuf.any_pb2\nimport absl.app\nimport  google.protobuf.wrappers_pb2\nimport opt_einsum\nimport gast\nimport astunparse\nimport termcolor\nimport google.protobuf.json_format\nimport absl.testing\nimport absl.testing.parameterized\nimport flatbuffers\nimport requests\nimport h5py\nimport lmdb\nimport sklearn\nimport networkx\nimport onnx.numpy_helper\nimport onnx.backend\nimport onnx.backend.base\nimport ply\nimport ply.lex\nimport ply.yacc\nimport dill\n" \
+                   --extra_sys_str /usr/local/site-packages \
                    --app_name local_conta_ocr_rknn \
                    --lib_path local_conta_ocr_aarch64_lib64
       - name: Ascend打包环境准备
@@ -130,13 +125,11 @@ jobs:
           # Set an output parameter `uname` for use in subsequent steps
           run: |
             cd /code
-            ls requirements/Ascend/requirements.txt -l
             pip install -r requirements.txt
-            pip install -r requirements/Ascend/requirements.txt
             python packing_app.py \
-                  --head_str "import sys \nsys.path.append('/usr/local/Ascend/nnrt/latest/python/site-packages')\nsys.path.append('/usr/local/site-packages')\nfrom acllite.acllite_model import AclLiteModel\nfrom acllite.acllite_imageproc import AclLiteImageProc\nfrom acllite.acllite_image import AclLiteImage\nfrom acllite.acllite_resource import AclLiteResource\n" \
-                  --app_name local_conta_ocr_ascend \
-                  --lib_path local_conta_ocr_aarch64_lib64
+                   --extra_sys_str /usr/local/site-packages \
+                   --app_name local_conta_ocr_ascend \
+                   --lib_path local_conta_ocr_aarch64_lib64
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -145,4 +138,3 @@ jobs:
             "code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
-
