@@ -1,0 +1,142 @@
+name: 箱号服务发布
+
+on:
+  push:
+    tags:
+      - conta_serviceV*
+
+jobs:
+  release:
+    name: 箱号服务发布
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
+    steps:
+      - name: 克隆代码
+        uses: actions/checkout@v3
+      - name: 创建发行版本
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: README.md
+          draft: false
+          prerelease: false
+
+  amd64_job:
+    name:  ${{ matrix.device_type }}箱号服务打包
+    container:
+      image: jadehh/container_ocr:amd64-packing-1.0.1
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+        device_type: ["Paddle","ONNX"]
+    steps:
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/ContainerOCR
+          ref: 箱号服务
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: 安装pip环境
+        run: pip install -r code/requirements.txt
+      - name: Paddle打包编译
+        if: ${{ matrix.device_type=='Paddle'}}
+        run: |
+          cd code
+          python packing_app.py \
+                 --extra_sys_str /usr/local/conta_detect-1.0/python_lib
+      - name: ONNX打包编译
+        if: ${{ matrix.device_type=='ONNX'}}
+        run: |
+          cd code
+          python packing_app.py \
+                 --extra_sys_str /usr/local/site-packages \
+                 --app_name local_conta_service_onnx \
+                 --lib_path local_conta_service_x86_lib64
+
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files:
+            "code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
+  aarch64_job:
+    # The host should always be Linux
+    name: ${{ matrix.device_type }}箱号服务打包
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+        device_type: ["RKNN","Ascend"]
+    steps:
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/ContainerOCR
+          ref: 箱号服务
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: RKNN打包环境准备
+        if: ${{ matrix.device_type=='RKNN'}}
+        uses: uraimo/run-on-arch-action@v2
+        with:
+          arch: aarch64
+          distro: ubuntu18.04
+
+          # Not required, but speeds up builds by storing container images in
+          # a GitHub package registry.
+          githubToken: ${{ github.token }}
+          dockerRunArgs: |
+            --volume "${PWD}/code:/code"
+          base_image: jadehh/miniconda3:aarch64-4.9.2
+          # Set an output parameter `uname` for use in subsequent steps
+          run: |
+            cd /code
+            pip install -r requirements.txt
+            python packing_app.py \
+                   --extra_sys_str /usr/local/site-packages \
+                   --app_name local_conta_service_rknn \
+                   --lib_path local_conta_service_aarch64_lib64
+      - name: Ascend打包环境准备
+        if: ${{ matrix.device_type=='Ascend'}}
+        uses: uraimo/run-on-arch-action@v2
+        with:
+          arch: aarch64
+          distro: ubuntu18.04
+
+          # Not required, but speeds up builds by storing container images in
+          # a GitHub package registry.
+          githubToken: ${{ github.token }}
+          dockerRunArgs: |
+            --volume "${PWD}/code:/code"
+          base_image: jadehh/miniconda3:aarch64-4.9.2
+          # Set an output parameter `uname` for use in subsequent steps
+          run: |
+            cd /code
+            pip install -r requirements.txt
+            python packing_app.py \
+                   --extra_sys_str /usr/local/site-packages \
+                   --app_name local_conta_service_ascend \
+                   --lib_path local_conta_service_aarch64_lib64
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files:
+            "code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
