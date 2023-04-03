@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: jadehh/ContainerOCR
-          ref: 箱号图片抓拍
+          ref: conta_capture
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 安装pip环境
@@ -87,7 +87,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: jadehh/ContainerOCR
-          ref: 箱号图片抓拍
+          ref: conta_capture
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: RKNN打包环境准备
