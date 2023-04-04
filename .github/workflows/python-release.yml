@@ -36,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
         device_type: ["Paddle","ONNX"]
     steps:
       - name: 下载代码
@@ -80,7 +80,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ "ubuntu-18.04" ] #, "macos-latest", "windows-latest"
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
         device_type: ["RKNN","Ascend"]
     steps:
       - name: 下载代码
