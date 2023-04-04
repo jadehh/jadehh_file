@@ -38,8 +38,8 @@ jobs:
       fail-fast: false
       matrix:
 #        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest
-        os: ["ubuntu-18.04", "windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
-        python-version: ["3.6"]
+        os: ["ubuntu-latest", "windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
+        python-version: ["3.7"]
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
