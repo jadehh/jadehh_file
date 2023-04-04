@@ -55,13 +55,13 @@ jobs:
           repository: jadehh/InnoSetup
           path: InnoSetup
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: Windows 准备Python3.6 X86 环境
+      - name: Windows 准备Python X86 环境
         if: runner.os == 'Windows'
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x86
-      - name: 其他操作系统准备Python3.6 X64环境
+      - name: 其他操作系统准备Python X64环境
         if: runner.os != 'Windows'
         uses: actions/setup-python@v3
         with:
@@ -90,6 +90,7 @@ jobs:
           wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
           chmod a+x ~/appimagetool-x86_64.AppImage
+          sudo apt-get install libfuse2
       - name: 编译打包
         env:
           PYTHONIOENCODING: "utf-8"
