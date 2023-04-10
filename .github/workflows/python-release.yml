@@ -49,6 +49,7 @@ jobs:
           pip install -r code/requirements.txt
           apt-get install -y wget
           apt-get install -y libgl1-mesa-glx
+          apt-get install -y libfuse2
           apt-get install -y libsm6 libxrender1 libfontconfig1
           wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
