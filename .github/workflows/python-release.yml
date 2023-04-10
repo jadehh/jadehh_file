@@ -27,19 +27,15 @@ jobs:
           body_path: README.md
           draft: false
           prerelease: false
-  other:
-    name: 打包发布-操作系统版本:(${{ matrix.os }},Python版本:${{ matrix.python-version }})
+  Ubuntu:
+    name: 打包发布-操作系统版本:(${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    permissions:
-      contents: read
-      security-events: write
-      pull-requests: write
+    container:
+      image: jadehh/container_ocr:amd64-packing-1.0.1
     strategy:
       fail-fast: false
       matrix:
-#        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest
-        os: ["ubuntu-latest", "windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
-        python-version: ["3.7"]
+        os: [ "ubuntu-latest" ] # "ubuntu-18.04", "windows-latest","macos-latest"
     steps:
       - name: 下载代码
         uses: actions/checkout@v3
@@ -48,49 +44,15 @@ jobs:
           ref: AlgorithmConfiure
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: Windows操作系统安装Inno Setup 下载
-        if: runner.os == 'Windows'
-        uses: actions/checkout@v3
-        with:
-          repository: jadehh/InnoSetup
-          path: InnoSetup
-          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: Windows 准备Python X86 环境
-        if: runner.os == 'Windows'
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x86
-      - name: 其他操作系统准备Python X64环境
-        if: runner.os != 'Windows'
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
-      - name: pip升级
-        shell: pwsh
-        run: |
-          python -m pip install --upgrade pip
-      - name: Windows操作系统准备打包环境
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: |
-          pip install pywin32
-          pip install -r code/requirements.txt
-      - name: macOS操作系统准备打包环境
-        if: runner.os == 'macOS'
+      - name: 准备打包环境
         shell: pwsh
         run: |
           pip install -r code/requirements.txt
-      - name: Linux操作系统准备打包环境
-        if: runner.os == 'Linux'
-        shell: pwsh
-        run: |
-          pip install -r code/requirements.txt
+          apt-get install -y wget
+          apt-get install -y libgl1-mesa-glx
+          apt-get install -y libsm6 libxrender1 libfontconfig1
           wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
-          chmod a+x ~/appimagetool-x86_64.AppImage
-          sudo apt-get install libfuse2
       - name: 编译打包
         env:
           PYTHONIOENCODING: "utf-8"
@@ -111,4 +73,5 @@ jobs:
           files:
             "./code/Output/*"
         env:
-            GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
