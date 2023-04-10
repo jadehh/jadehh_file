@@ -45,7 +45,6 @@ jobs:
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 准备打包环境
-        shell: pwsh
         run: |
           pip install -r code/requirements.txt
           apt-get install -y wget
@@ -54,14 +53,10 @@ jobs:
           wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
       - name: 编译打包
-        env:
-          PYTHONIOENCODING: "utf-8"
-        shell: pwsh
         run: |
           cd code
           python packing.py   # --specify_files samplesMain.py
       - name: 测试是否打包完成
-        shell: pwsh
         run: |
           cd code/Output
           ls
