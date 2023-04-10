@@ -47,7 +47,7 @@ jobs:
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 安装pip环境
-        run: pip install -r code/requirements.txt.txt
+        run: pip install -r code/requirements.txt
       - name: Paddle打包编译
         if: ${{ matrix.device_type=='Paddle'}}
         run: |
