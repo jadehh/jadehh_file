@@ -17,6 +17,7 @@ jobs:
       - name: 克隆代码
         uses: actions/checkout@v3
       - name: 创建发行版本
+        continue-on-error: true
         id: create_release
         uses: actions/create-release@v1
         env:
