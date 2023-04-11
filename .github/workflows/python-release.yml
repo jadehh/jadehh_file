@@ -104,14 +104,28 @@ jobs:
           cd code/Output
           ls
       # 发布
+      # 发布
       - name: 发布
+        id: upload_try1
+        continue-on-error: true
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files:
             "./code/Output/*"
         env:
-            GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
+      - name: 尝试重新上传
+        id: upload_try2
+        if: steps.upload_try1.outcome == 'failure'
+        continue-on-error: true
+        uses: softprops/action-gh-release@v1
+        with:
+          files:
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
   Ubuntu:
     name: 打包发布-操作系统版本:(${{ matrix.os }})
     runs-on: ${{ matrix.os }}
