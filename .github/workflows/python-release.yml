@@ -64,11 +64,24 @@ jobs:
                  --lib_path local_conta_service_x86_lib64
 
       - name: 发布
+        id: upload_try1
+        continue-on-error: true
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files:
-            "code/Output/*"
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
+      - name: 尝试重新上传
+        id: upload_try2
+        if: steps.upload_try1.outcome == 'failure'
+        continue-on-error: true
+        uses: softprops/action-gh-release@v1
+        with:
+          files:
+            "./code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
 
@@ -131,12 +144,25 @@ jobs:
                    --extra_sys_str /usr/local/site-packages \
                    --app_name local_conta_service_ascend \
                    --lib_path local_conta_service_aarch64_lib64
+
       - name: 发布
+        id: upload_try1
+        continue-on-error: true
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files:
-            "code/Output/*"
+            "./code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
 
+      - name: 尝试重新上传
+        id: upload_try2
+        if: steps.upload_try1.outcome == 'failure'
+        continue-on-error: true
+        uses: softprops/action-gh-release@v1
+        with:
+          files:
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
