@@ -1,5 +1,5 @@
 # 箱号识别服务
-## 箱号识别服务V2.4.9.4 - 2023-04-07 09:21:17
+## 箱号识别服务V2.4.9.4 - 2023-04-11 05:51:41
 conta_ocrV2.4.9.4
 *  [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_ocrV2.4.9.4)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_ocrV2.4.9.4)
