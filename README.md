@@ -1,10 +1,10 @@
 # 箱号服务
-## 箱号服务V2.4.9.8 - 2023-04-11 08:40:54
-conta_serviceV2.4.9.8
-*  [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV2.4.9.8)
-*  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_serviceV2.4.9.8)
+## 箱号服务V2.5.0.1 - 2023-04-12 01:33:46
+conta_serviceV2.5.0.1
+*  [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV2.5.0.1)
+*  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_serviceV2.5.0.1)
 ### 下载地址
-* [conta_service_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.9.8/conta_service_lib64.zip)
-* [local_conta_service_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.9.8/local_conta_service_x86_lib64.zip)
-* [local_conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.4.9.8/local_conta_service_aarch64_lib64.zip)
+* [conta_service_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.5.0.1/conta_service_lib64.zip)
+* [local_conta_service_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.5.0.1/local_conta_service_x86_lib64.zip)
+* [local_conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV2.5.0.1/local_conta_service_aarch64_lib64.zip)
 ----
