@@ -69,7 +69,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files:
-            "code/Output/*"
+            "./code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
 
@@ -142,7 +142,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files:
-            "code/Output/*"
+            "./code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
 
