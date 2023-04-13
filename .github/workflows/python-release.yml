@@ -138,6 +138,7 @@ jobs:
           apt-get install -y libgl1-mesa-glx
           apt-get install -y libfuse2
           apt-get install -y libsm6 libxrender1 libfontconfig1
+          pip install opencv-python==4.2.0.34
           wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
           mv appimagetool-x86_64.AppImage ~/
           chmod a+x ~/appimagetool-x86_64.AppImage
