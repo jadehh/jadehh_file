@@ -29,7 +29,7 @@ jobs:
           prerelease: false
 
   amd64_job:
-    name:  ${{ matrix }}视频拼接管理服务打包
+    name:  视频拼接管理服务打包
     container:
       image: jadehh/container_ocr:amd64-packing-1.0.1
     runs-on: ${{ matrix.os }}
@@ -50,7 +50,6 @@ jobs:
       - name: 打包编译
         run: |
           cd code
-          pip install -r requirements/Paddle/requirements.txt
           python packing_app.py \
                 --head_str ""
       - name: 发布

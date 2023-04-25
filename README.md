@@ -1,5 +1,5 @@
 # 视频拼接管理服务
-## 视频拼接管理服务V1.0.0.0 - 2023-04-25 05:32:16
+## 视频拼接管理服务V1.0.0.0 - 2023-04-25 05:38:23
 vs_manage_serviceV1.0.0.0
 *  [发布地址](https://github.com/jadehh/VideoStitching/releases/tag/vs_manage_serviceV1.0.0.0)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/vs_manage_serviceV1.0.0.0)
