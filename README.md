@@ -5,5 +5,4 @@
 模型库
 * [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/VideoStitchingModelsV1.0.1)
 #### 下载地址
-* [models.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/VideoStitchingModelsV1.0.1/models.zip)
----
+* [video_stitching_models.zip](https://github.com/jadehh/jadehh_file/releases/download/VideoStitchingModelsV1.0.1/video_stitching_models.zip)
