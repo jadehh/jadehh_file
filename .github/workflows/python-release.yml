@@ -54,7 +54,7 @@ jobs:
           cd code
           pip install -r requirements/Paddle/requirements.txt
           python packing_app.py \
-          --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nsys.path.append('/usr/local/site-packages/')\nimport paddle\n"
+          --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n"
       - name: ONNX打包编译
         if: ${{ matrix.device_type=='ONNX'}}
         run: |
@@ -68,10 +68,10 @@ jobs:
         run: |
           cd code
           python packing_app.py \
-                 --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nsys.path.append('/usr/local/site-packages/')\nimport paddle\n"\
+                 --head_str "import sys\nsys.path.append('/usr/local/site-packages/')\nimport paddle\n"\
                  --name 箱号图片抓拍Amd64  \
                  --app_name conta_capture_amd64 \
-                 --zip_lib False
+                 --lib_path conta_capture_amd64_lib64 \
 
       - name: 发布
         uses: softprops/action-gh-release@v1
