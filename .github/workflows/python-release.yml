@@ -52,14 +52,14 @@ jobs:
         if: ${{ matrix.device_type=='Paddle'}}
         run: |
           cd code
-          pip install requirements/Paddle/requirements.txt
+          pip install -r  requirements/Paddle/requirements.txt
           python packing_app.py \
                  --extra_sys_str /usr/local/conta_detect-1.0/python_lib
       - name: ONNX打包编译
         if: ${{ matrix.device_type=='ONNX'}}
         run: |
           cd code
-          pip install requirements/ONNX/requirements.txt
+          pip install -r requirements/ONNX/requirements.txt
           python packing_app.py \
                  --extra_sys_str /usr/local/site-packages \
                  --app_name local_conta_ocr_onnx \
@@ -68,7 +68,7 @@ jobs:
         if: ${{ matrix.device_type=='Amd64'}}
         run: |
           cd code
-          pip install requirements/Amd64/requirements.txt
+          pip install -r  requirements/Amd64/requirements.txt
           python packing_app.py \
                   --head_str "import sys\nsys.path.append('/usr/local/site-packages/')\nimport paddle\n" \
                   --name 箱号识别服务Amd64 \
