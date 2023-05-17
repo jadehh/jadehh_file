@@ -54,12 +54,13 @@ jobs:
           cd code
           python packing_app.py \
                 --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n"
+   # 发布
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files:
-            "code/Output/*"
+            "./code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
 
