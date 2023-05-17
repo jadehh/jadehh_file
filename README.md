@@ -1,8 +1,13 @@
 # jadehh_file
 文件托管
-## VideoStitchingModelsV1.0.1
-### models
+### conta_modelsV1.0.7
 模型库
-* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/VideoStitchingModelsV1.0.1)
+* [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_modelsV1.0.7)
+* [详细地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_modelsV1.0.7)
+
 #### 下载地址
-* [video_stitching_models.zip](https://github.com/jadehh/jadehh_file/releases/download/VideoStitchingModelsV1.0.1/video_stitching_models.zip)
+* [pp_models.zip]()
+* [onnx_models.zip]()
+* [ascend_models.zip]()
+* [rknn_models.zip]()
+---
