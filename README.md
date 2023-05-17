@@ -6,5 +6,5 @@
 * [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_custom_modelsV1.0.1)
 
 #### 下载地址
-* [conta_custom_models.zip](https://github.com/jadehh/jadehh_file/releases/tag/conta_custom_modelsV1.0.1/conta_custom_models.zip)
+* [conta_custom_models.zip](https://gh.con.sh/https://github.com/jadehh/jadehh_file/releases/download/conta_custom_modelsV1.0.1/conta_custom_models.zip)
 ---
