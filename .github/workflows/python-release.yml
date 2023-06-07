@@ -133,7 +133,9 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 准备打包环境
         run: |
+          rm -r /etc/apt/sources.list
           pip install -r code/requirements.txt
+          apt-get update
           apt-get install -y wget
           apt-get install -y libgl1-mesa-glx
           apt-get install -y libfuse2
