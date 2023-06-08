@@ -117,7 +117,7 @@ jobs:
     name: 打包发布-操作系统版本:(${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     container:
-      image: jadehh/container_ocr:amd64-packing-1.0.1
+      image: jadehh/container_ocr:amd64-packing-1.0.2
       options: --privileged
     strategy:
       fail-fast: false
@@ -133,9 +133,7 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 准备打包环境
         run: |
-          rm -r /etc/apt/sources.list
           pip install -r code/requirements.txt
-          apt-get update
           apt-get install -y wget
           apt-get install -y libgl1-mesa-glx
           apt-get install -y libfuse2
