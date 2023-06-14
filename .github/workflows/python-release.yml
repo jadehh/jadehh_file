@@ -53,7 +53,8 @@ jobs:
         run: |
           cd code
           python packing_app.py \
-                --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n"
+                --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n" \
+                --is_exec False
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
