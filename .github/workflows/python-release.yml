@@ -107,13 +107,14 @@ jobs:
         run: |
           cd code
           pip install -r requirements/ONNX/requirements.txt
-          python packing_app.py 
+          python packing_app.py \
                   --extra_sys_str /usr/local/site-packages \
-                  --head_str "import sys \nsys.path.append('/opencv-4.8.0/build/lib/python3')"
+                  --head_str "import sys \nsys.path.append('/opencv-4.8.0/build/lib/python3')\nsys.path.append('/usr/local/lib/python3.10/dist-packages')" \
                   --name 箱号图片抓拍ONNX \
                   --app_name local_conta_capture_onnx \
-                  --lib_path local_conta_capture_x86_lib64  \
+                  --lib_path local_conta_capture_x86_lib64 \
                   --is_exec True
+
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
