@@ -112,7 +112,7 @@ jobs:
                   --head_str "import sys \nsys.path.append('/opencv-4.8.0/build/lib/python3')"
                   --name 箱号图片抓拍ONNX \
                   --app_name local_conta_capture_onnx \
-                  --lib_path local_conta_capture_x86_lib64  
+                  --lib_path local_conta_capture_x86_lib64  \
                   --is_exec True
       - name: 发布
         uses: softprops/action-gh-release@v1
