@@ -1,5 +1,5 @@
 # 箱号服务
-## 箱号服务V3.0.3.3 - 2023-07-11 02:26:03
+## 箱号服务V3.0.3.3 - 2023-07-11 02:36:37
 conta_serviceV3.0.3.3
 *  [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV3.0.3.3)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_serviceV3.0.3.3)

@@ -102,11 +102,10 @@ jobs:
         run: pip install -r code/requirements-py-3-10.txt
 
       - name: ONNX打包编译
-        if: ${{ matrix.device_type=='ONNX'}}
         run: |
           cd code
           python packing_app.py \
-                 --extra_sys_str /usr/local/site-packages \
+                 --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                  --app_name local_conta_service_onnx \
                  --lib_path local_conta_service_x86_lib64 \
                  --is_exec True
