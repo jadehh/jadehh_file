@@ -1,0 +1,73 @@
+name: 视频拼接算法服务发布
+
+on:
+  push:
+    tags:
+      - vs_algorithm_serviceV*
+
+jobs:
+  release:
+    name: 视频拼接算法服务发布
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
+    steps:
+      - name: 克隆代码
+        uses: actions/checkout@v3
+      - name: 创建发行版本
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: README.md
+          draft: false
+          prerelease: false
+
+  amd64_job:
+    name: ${{ matrix.device_type }}箱号图片抓拍打包
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] # "ubuntu-18.04", "windows-latest","macos-latest"
+        device_type: [ "ONNX" ]
+    steps:
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/VideoStitching
+          ref: vs_algorithm_service
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: 使用Python环境
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.10.6
+      - name: pip升级
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+      - name: 安装pip环境
+        run: pip install -r code/requirements.txt
+      - name: 打包编译
+        run: |
+          cd code
+          python packing_app.py \
+          --is_exec True \
+          --head_str "import sys\nsys.path.append('/usr/local/site-packages')\nsys.path.append('/usr/local/opencv')\n" \
+          --is_exec True
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files:
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
+
