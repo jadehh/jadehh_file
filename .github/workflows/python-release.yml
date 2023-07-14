@@ -65,7 +65,7 @@ jobs:
                   --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                   --name 箱号识别服务ONNX \
                   --app_name local_conta_ocr_onnx \
-                  --lib_path local_conta_ocr_x86_lib64
+                  --lib_path local_conta_ocr_x86_lib64 \
                   --is_exec True
       - name: Amd64打包编译
         if: ${{ matrix.device_type=='Amd64'}}
