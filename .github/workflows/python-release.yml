@@ -101,7 +101,6 @@ jobs:
       - name: ONNX打包编译
         run: |
           cd code
-          pip install -r requirements/ONNX/requirements.txt
           python packing_app.py \
                  --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                  --app_name local_conta_service_onnx \
