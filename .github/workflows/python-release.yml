@@ -46,7 +46,9 @@ jobs:
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 安装pip环境
-        run: pip install -r code/requirements.txt
+        run: |
+          pip install -r code/requirements.txt
+          pip uninstall -y numpy
       - name: 打包编译
         run: |
           cd code
