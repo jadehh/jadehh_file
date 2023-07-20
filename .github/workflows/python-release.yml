@@ -31,7 +31,7 @@ jobs:
   amd64_job:
     name:  视频拼接管理服务打包
     container:
-      image: jadehh/container_ocr:amd64-packing-1.0.1
+      image: jadehh/python:3.10.11-ubuntu18.04
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -51,9 +51,8 @@ jobs:
         run: |
           cd code
           python packing_app.py \
-          --is_exec True \
-          --head_str "import sys\nsys.path.append('/usr/local/site-packages')\n" \
-          --is_exec False
+                 --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
+                 --is_exec True
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
