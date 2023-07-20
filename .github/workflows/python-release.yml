@@ -54,7 +54,7 @@ jobs:
           cd code
           python packing_app.py \
                  --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
-                 --head_str from __future__ import annotations\nimport secrets\n \
+                 --head_str “from __future__ import annotations\nimport secrets\n” \
                  --is_exec True
       - name: 发布
         uses: softprops/action-gh-release@v1
