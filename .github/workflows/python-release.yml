@@ -108,8 +108,7 @@ jobs:
                  --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                  --app_name local_conta_ocr_onnx \
                  --lib_path local_conta_ocr_x86_lib64 \
-                 --is_exec True \
-                 --exclude_files libbz2.so.1.0,libcrypto.so.1.1,libsqlite3.so.0,libssl.so.1.1,libz.so.1,cryptography/hazmat/bindings/_openssl.abi3.so
+                 --is_exec True
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
