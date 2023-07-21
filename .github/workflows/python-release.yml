@@ -78,7 +78,7 @@ jobs:
   Py310:
     name: ${{ matrix.device_type }}箱号识别服务打包
     container:
-      image: jadehh/python:3.10.11-ubuntu18.04
+      image: jadehh/python:3.8.16-ubuntu18.04
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -95,7 +95,7 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 安装pip环境
         run: |
-            pip install -r code/requirements-py-3-10.txt
+            pip install -r code/requirements.txt
             pip uninstall -y numpy
 
       - name: ONNX打包编译
