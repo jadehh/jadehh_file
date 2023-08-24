@@ -1,5 +1,5 @@
 # 算法配置客户端
-## 算法配置客户端V2.0.7.2 - 2023-08-24 08:35:58
+## 算法配置客户端V2.0.7.2 - 2023-08-24 08:56:56
 AlgorithmConfiureV2.0.7.2
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/V2.0.7.2)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/AlgorithmConfiureV2.0.7.2)
