@@ -1,14 +1,14 @@
 # 算法配置客户端
-## 算法配置客户端V2.0.7.3 - 2023-08-29 02:50:12
-AlgorithmConfiureV2.0.7.3
-*  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/V2.0.7.3)
-*  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/AlgorithmConfiureV2.0.7.3)
+## 算法配置客户端V2.0.7.4 - 2023-08-29 06:25:16
+AlgorithmConfiureV2.0.7.4
+*  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/V2.0.7.4)
+*  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/AlgorithmConfiureV2.0.7.4)
 ### 下载地址
-* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/Windows_lib32.zip)
-* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/Linux_lib64.zip)
-* [AlgorithmConfiure_setup-Portable-V2.0.7-3.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/AlgorithmConfiure_setup-Portable-V2.0.7-3.exe)
-* [AlgorithmConfiure_setup-V2.0.7-3.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/AlgorithmConfiure_setup-V2.0.7-3.exe)
-* [AlgorithmConfiure-Portable-Linux-V2.0.7-3.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/AlgorithmConfiure-Portable-Linux-V2.0.7-3.zip)
-* [AlgorithmConfiure-Linux-V2.0.7-3.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/AlgorithmConfiure-Linux-V2.0.7-3.zip)
-* [AlgorithmConfiure-Portable-Darwin-V2.0.7-3.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.3/AlgorithmConfiure-Portable-Darwin-V2.0.7-3.zip)
+* [Windows_lib32.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/Windows_lib32.zip)
+* [Linux_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/Linux_lib64.zip)
+* [AlgorithmConfiure_setup-Portable-V2.0.7-4.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/AlgorithmConfiure_setup-Portable-V2.0.7-4.exe)
+* [AlgorithmConfiure_setup-V2.0.7-4.exe](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/AlgorithmConfiure_setup-V2.0.7-4.exe)
+* [AlgorithmConfiure-Portable-Linux-V2.0.7-4.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/AlgorithmConfiure-Portable-Linux-V2.0.7-4.zip)
+* [AlgorithmConfiure-Linux-V2.0.7-4.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/AlgorithmConfiure-Linux-V2.0.7-4.zip)
+* [AlgorithmConfiure-Portable-Darwin-V2.0.7-4.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/AlgorithmConfiureV2.0.7.4/AlgorithmConfiure-Portable-Darwin-V2.0.7-4.zip)
 ----
