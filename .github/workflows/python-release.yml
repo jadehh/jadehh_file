@@ -54,7 +54,7 @@ jobs:
           cd code
           python packing_app.py \
                  --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nsys.path.append('/usr/local/site-packages')\n" \
-                 --is_exec True
+                 --is_exec False
 
       - name: Amd64打包编译
         if: ${{ matrix.device_type=='Amd64'}}
@@ -65,7 +65,7 @@ jobs:
                   --name 箱号服务Amd64 \
                   --app_name conta_service_amd64 \
                   --lib_path conta_service_amd64_lib64 \
-                  --is_exec True
+                  --is_exec False
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -106,7 +106,7 @@ jobs:
                  --app_name local_conta_service_onnx \
                  --lib_path local_conta_service_x86_lib64 \
                  --exclude_files libbz2.so.1.0,libcrypto.so.1.1,libsqlite3.so.0,libssl.so.1.1,libz.so.1,cryptography/hazmat/bindings/_openssl.abi3.so \
-                 --is_exec True
+                 --is_exec False
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -153,7 +153,7 @@ jobs:
                    --extra_sys_str /usr/local/site-packages \
                    --app_name local_conta_service_rknn \
                    --lib_path local_conta_service_aarch64_lib64 \
-                   --is_exec True 
+                   --is_exec False 
 
       - name: Ascend打包环境准备
         if: ${{ matrix.device_type=='Ascend'}}
@@ -176,7 +176,7 @@ jobs:
                    --extra_sys_str /usr/local/site-packages \
                    --app_name local_conta_service_ascend \
                    --lib_path local_conta_service_aarch64_lib64 \
-                   --is_exec True 
+                   --is_exec False 
 
       - name: 发布
         uses: softprops/action-gh-release@v1
