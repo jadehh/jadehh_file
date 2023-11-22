@@ -1,0 +1,131 @@
+name: 视频推流服务
+
+on:
+  push:
+    tags:
+      - StreamServerV*
+
+jobs:
+  release:
+    name: ${{ matrix.os }} 创建Release
+    runs-on:  ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] #, "macos-latest", "windows-latest"
+    steps:
+      - name: 克隆代码
+        uses: actions/checkout@v3
+      - name: 创建发行版本
+        continue-on-error: true
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: README.md
+          draft: false
+          prerelease: false
+  Windows:
+    name: 打包发布-操作系统版本:(${{ matrix.os }},Python版本:${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      security-events: write
+      pull-requests: write
+    strategy:
+      fail-fast: false
+      matrix:
+#        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest
+        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
+        python-version: ["3.6"]
+    steps:
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/rtsp_to_rtmp
+          ref: StreamServer
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: Windows 准备Python X86 环境
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x86
+      - name: pip升级
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+      - name: Windows操作系统准备打包环境
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          pip install -r code/requirements.txt
+      - name: 编译打包
+        env:
+          PYTHONIOENCODING: "utf-8"
+        shell: pwsh
+        run: |
+          cd code
+          python packing.py   # --specify_files samplesMain.py
+      - name: 测试是否打包完成
+        shell: pwsh
+        run: |
+          cd code/Output
+          ls
+      # 发布
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files:
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+  Ubuntu:
+    name: 打包发布-操作系统版本:(${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    container:
+      image: jadehh/container_ocr:amd64-packing-1.0.2
+      options: --privileged
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] # "ubuntu-18.04", "windows-latest","macos-latest"
+    steps:
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/rtsp_to_rtmp
+          ref: StreamServer
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: 准备打包环境
+        run: |
+          pip install -r code/requirements.txt
+          apt-get install -y wget
+          apt-get install -y libgl1-mesa-glx
+          apt-get install -y libfuse2
+          apt-get install -y libsm6 libxrender1 libfontconfig1
+          wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
+          mv appimagetool-x86_64.AppImage ~/
+          chmod a+x ~/appimagetool-x86_64.AppImage
+      - name: 编译打包
+        run: |
+          cd code
+          python packing.py   # --specify_files samplesMain.py
+      - name: 测试是否打包完成
+        run: |
+          cd code/Output
+          ls
+      # 发布
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files:
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
