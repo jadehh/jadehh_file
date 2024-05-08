@@ -66,6 +66,8 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: Windows 准备Python X86 环境
         if: runner.os == 'Windows'
+        run: |
+          brew install gettext
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
