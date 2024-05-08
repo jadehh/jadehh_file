@@ -43,7 +43,7 @@ jobs:
       fail-fast: false
       matrix:
 #        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest
-        os: ["windows-latest","macos-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
+        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
         python-version: ["3.6"]
     steps:
       - name: 时区设置
@@ -70,10 +70,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x86
-      - name: 其他操作系统准备系统环境
-        if: runner.os != 'Windows'
-        run: |
-            brew install gettext
       - name: 其他操作系统准备Python X64环境
         if: runner.os != 'Windows'
         uses: actions/setup-python@v3
