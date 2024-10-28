@@ -193,27 +193,27 @@ jobs:
         with:
           arch: aarch64
           distro: ubuntu18.04
-      - name: 准备打包环境
-        run: |
-          apt-get install python3-pyqt5
-          apt-get install python3-pip
-          apt-get install -y wget
-          apt-get install -y libgl1-mesa-glx
-          apt-get install -y libfuse2
-          apt-get install -y libsm6 libxrender1 libfontconfig1
-          pip3 install -r code/requirements.txt
-          pip3 install opencv-python==4.2.0.34
-          wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
-          mv appimagetool-aarch64.AppImage ~/
-          chmod a+x ~/appimagetool-aarch64.AppImage
-      - name: 编译打包
-        run: |
-          cd code
-          python3 packing.py   # --specify_files samplesMain.py
-      - name: 测试是否打包完成
-        run: |
-          cd code/Output
-          ls
+          # Not required, but speeds up builds by storing container images in
+          # a GitHub package registry.
+          githubToken: ${{ github.token }}
+          dockerRunArgs: |
+            --volume "${PWD}/code:/code"
+          base_image: jadehh/miniconda3:aarch64-4.9.2
+          run: |
+            apt-get install python3-pyqt5
+            apt-get install python3-pip
+            apt-get install -y wget
+            apt-get install -y libgl1-mesa-glx
+            apt-get install -y libfuse2
+            apt-get install -y libsm6 libxrender1 libfontconfig1
+            pip3 install -r code/requirements.txt
+            pip3 install opencv-python==4.2.0.34
+            wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
+            mv appimagetool-aarch64.AppImage ~/
+            chmod a+x ~/appimagetool-aarch64.AppImage
+            python3 packing.py   # --specify_files samplesMain.py
+            cd code/Output
+            ls
       # 发布
       - name: 发布
         uses: softprops/action-gh-release@v1
