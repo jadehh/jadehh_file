@@ -170,3 +170,53 @@ jobs:
             "./code/Output/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
+
+
+  aarch64:
+    name: 打包发布-操作系统版本:(${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    container:
+      image: jadehh/ubuntu:aarch-18.04
+      options: --privileged
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest" ] # "ubuntu-18.04", "windows-latest","macos-latest"
+    steps:
+      - name: 下载代码
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/AlgorithmConfigUI
+          ref: AlgorithmConfiure
+          path: code
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+      - name: 准备打包环境
+        run: |
+          apt-get install python3-pyqt5
+          apt-get install python3-pip
+          apt-get install -y wget
+          apt-get install -y libgl1-mesa-glx
+          apt-get install -y libfuse2
+          apt-get install -y libsm6 libxrender1 libfontconfig1
+          pip3 install -r code/requirements.txt
+          pip3 install opencv-python==4.2.0.34
+          wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
+          mv appimagetool-aarch64.AppImage ~/
+          chmod a+x ~/appimagetool-aarch64.AppImage
+      - name: 编译打包
+        run: |
+          cd code
+          python3 packing.py   # --specify_files samplesMain.py
+      - name: 测试是否打包完成
+        run: |
+          cd code/Output
+          ls
+      # 发布
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files:
+            "./code/Output/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # 给最高的权限
