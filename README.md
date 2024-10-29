@@ -1,5 +1,5 @@
 # 算法配置客户端
-## 算法配置客户端V2.1.5.5 - 2024-10-28 16:19:57
+## 算法配置客户端V2.1.5.5 - 2024-10-29 15:20:46
 AlgorithmConfiureV2.1.5.5
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/V2.1.5.5)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/AlgorithmConfiureV2.1.5.5)

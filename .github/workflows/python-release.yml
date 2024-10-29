@@ -200,17 +200,7 @@ jobs:
             --volume "${PWD}/code:/code"
           base_image: jadehh/miniconda3:aarch64-4.9.2
           run: |
-            apt-get install python3-pyqt5
-            apt-get install python3-pip
-            apt-get install -y wget
-            apt-get install -y libgl1-mesa-glx
-            apt-get install -y libfuse2
-            apt-get install -y libsm6 libxrender1 libfontconfig1
-            pip3 install -r code/requirements.txt
-            pip3 install opencv-python==4.2.0.34
-            wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
-            mv appimagetool-aarch64.AppImage ~/
-            chmod a+x ~/appimagetool-aarch64.AppImage
+            pip3 install -r requirements/arm64/requirements.txt
             python3 packing.py   # --specify_files samplesMain.py
             cd code/Output
             ls
