@@ -198,8 +198,9 @@ jobs:
           githubToken: ${{ github.token }}
           dockerRunArgs: |
             --volume "${PWD}/code:/code"
-          base_image: jadehh/miniconda3:aarch64-4.9.2
+          base_image: jadehh/python:qt5-arm64
           run: |
+            cd /code
             pip3 install -r requirements/arm64/requirements.txt
             python3 packing.py   # --specify_files samplesMain.py
             cd code/Output
