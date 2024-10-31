@@ -202,7 +202,7 @@ jobs:
           run: |
             cd /code
             pip3 install -r requirements/arm64/requirements.txt
-            python3 packing.py   # --specify_files samplesMain.py
+            python3 packing.py --appimage False   # --specify_files samplesMain.py
             cd code/Output
             ls
       # 发布
