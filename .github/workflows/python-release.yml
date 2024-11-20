@@ -145,6 +145,7 @@ jobs:
           image: jadehh/container_ocr:amd64-packing-1.0.2
           options: -v ${{ github.workspace }}:/code
           run: |
+            ls -l
             cd /code/
             pip install -r requirements.txt
             apt-get install -y wget
