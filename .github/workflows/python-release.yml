@@ -7,8 +7,6 @@ on:
 
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-  ACTIONS_RUNNER_FORCED_INTERNAL_NODE_VERSION: node16
-  ACTIONS_RUNNER_FORCE_ACTIONS_NODE_VERSION: node16
 
 jobs:
   release:
@@ -137,6 +135,10 @@ jobs:
       matrix:
         os: [ "ubuntu-latest" ] # "ubuntu-18.04", "windows-latest","macos-latest"
     steps:
+      - name: 设置环境变量
+        run: |
+          echo "GHA_USE_NODE_20=false" >> $GITHUB_ENV
+          echo "ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true" >> $GITHUB_ENV
       - name: 下载代码
         uses: actions/checkout@v3
         with:
