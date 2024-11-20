@@ -150,8 +150,8 @@ jobs:
             pip install -r requirements.txt
             pip install opencv-python==4.2.0.34
             echo "#############################编译打包#############################"
-            python
-#            python packing.py  --appimage False # --specify_files samplesMain.py
+            python --version
+            python packing.py --is_auto_packing True
             echo "#############################测试打包是否完成#############################"
             ls Output -l
       # 发布
