@@ -137,13 +137,13 @@ jobs:
         with:
           repository: jadehh/AlgorithmConfigUI
           ref: AlgorithmConfiure
-          path: code
+          path: /code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 使用Docker打包
         uses: addnab/docker-run-action@v3
         with:
           image: jadehh/container_ocr:amd64-packing-1.0.2
-          options: -v ${{ github.workspace }}:/code
+          options: -v /code:/code
           run: |
             echo "准备打包环境"
             cd /code/
