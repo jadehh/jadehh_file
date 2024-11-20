@@ -145,14 +145,15 @@ jobs:
           image: jadehh/container_ocr:amd64-packing-1.0.2
           options: -v ${{ github.workspace }}/code:/code
           run: |
-            echo "准备打包环境"
+            echo "#############################准备打包环境#############################"
             cd /code/
-            ls - l
             pip install -r requirements.txt
             pip install opencv-python==4.2.0.34
-            echo "编译打包"
-            python packing.py  --appimage False # --specify_files samplesMain.py
-            echo "测试打包是否完成"
+            echo "#############################编译打包#############################"
+            python
+#            python packing.py  --appimage False # --specify_files samplesMain.py
+            echo "#############################测试打包是否完成#############################"
+            ls Output -l
       # 发布
       - name: 发布
         uses: softprops/action-gh-release@v1
