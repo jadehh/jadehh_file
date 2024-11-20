@@ -139,9 +139,6 @@ jobs:
           ref: AlgorithmConfiure
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-        run: |
-          echo "Github Code地址"
-          echo ${{github.workspace}}
       - name: 使用Docker打包
         uses: addnab/docker-run-action@v3
         with:
