@@ -144,7 +144,9 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 准备打包环境
         run: |
-          pip install -r code/requirements.txt
+          ls -l
+          cd /home/runner/work/jadehh_file/code
+          pip install -r requirements.txt
           apt-get install -y wget
           apt-get install -y libgl1-mesa-glx
           apt-get install -y libfuse2
@@ -155,11 +157,11 @@ jobs:
           chmod a+x ~/appimagetool-x86_64.AppImage
       - name: 编译打包
         run: |
-          cd code
+          cd /home/runner/work/jadehh_file/code
           python packing.py  --appimage False # --specify_files samplesMain.py
       - name: 测试是否打包完成
         run: |
-          cd code/Output
+          cd /home/runner/work/jadehh_file/code/Output
           ls
       # 发布
       - name: 发布
