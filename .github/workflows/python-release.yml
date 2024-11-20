@@ -136,7 +136,7 @@ jobs:
         os: [ "ubuntu-latest" ] # "ubuntu-18.04", "windows-latest","macos-latest"
     steps:
       - name: 下载代码
-        uses: jadehh/checkout
+        uses: jadehh/checkout@v3
         with:
           repository: jadehh/AlgorithmConfigUI
           ref: AlgorithmConfiure
