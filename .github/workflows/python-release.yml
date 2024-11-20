@@ -146,7 +146,7 @@ jobs:
           options: -v ${{ github.workspace }}:/code
           run: |
             echo "准备打包环境"
-            cd code
+            cd /code/
             pip install -r requirements.txt
             pip install opencv-python==4.2.0.34
             echo "编译打包"
