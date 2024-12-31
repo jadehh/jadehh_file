@@ -49,14 +49,14 @@ jobs:
         with:
           repository: jadehh/ContainerOCR
           ref: conta_service
-          path: ./code
+          path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: Paddle打包编译
         if: ${{ matrix.device_type=='Paddle'}}
         uses: addnab/docker-run-action@v3
         with:
           image: jadehh/container_ocr:amd64-packing-1.0.2
-          options: -v ./code/code:/code
+          options: -v ${{ github.workspace }}/code:/code
           run: |
             cd /code
             pip install -r requirements.txt
@@ -85,7 +85,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: jadehh/container_ocr:amd64-packing-1.0.2
-          options: -v ./code:/code
+          options: -v ${{ github.workspace }}/code:/code
           run: |
            cd /code
            pip install -r requirements.txt
