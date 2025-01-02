@@ -1,5 +1,5 @@
 # 箱号服务
-## 箱号服务V3.0.8.1 - 2025-01-02 09:30:54
+## 箱号服务V3.0.8.1 - 2025-01-02 09:35:19
 conta_serviceV3.0.8.1
 *  [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_serviceV3.0.8.1)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_serviceV3.0.8.1)
@@ -7,5 +7,4 @@ conta_serviceV3.0.8.1
 * [conta_service_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV3.0.8.1/conta_service_lib64.zip)
 * [local_conta_service_x86_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV3.0.8.1/local_conta_service_x86_lib64.zip)
 * [local_conta_service_aarch64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV3.0.8.1/local_conta_service_aarch64_lib64.zip)
-* [conta_service_amd64_lib64.zip](https://gh.ddlc.top/https://github.com/jadehh/jadehh_file/releases/download/conta_serviceV3.0.8.1/conta_service_amd64_lib64.zip)
 ----
