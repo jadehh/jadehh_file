@@ -49,6 +49,10 @@ jobs:
         os: ["windows-latest"] # "ubuntu-18.04", "windows-latest","macos-latest"
         python-version: ["3.6"]
     steps:
+      - name: 时区设置
+        uses: szenius/set-timezone@v1.0 # 设置执行环境的时区
+        with:
+          timezoneLinux: "Asia/Shanghai"
       - name: 下载代码
         uses: actions/checkout@v3
         with:
