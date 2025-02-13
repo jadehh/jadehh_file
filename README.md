@@ -1,5 +1,5 @@
 # 算法配置客户端
-## 算法配置客户端V2.1.6.6 - 2025-02-11 09:25:45
+## 算法配置客户端V2.1.6.6 - 2025-02-13 09:11:56
 AlgorithmConfiureV2.1.6.6
 *  [发布地址](https://github.com/jadehh/AlgorithmConfigUI/releases/tag/V2.1.6.6)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/AlgorithmConfiureV2.1.6.6)
@@ -35,4 +35,7 @@ AlgorithmConfiureV2.1.6.6
 * 解决自动打包引用pydalsa的bug
 * controller中部分view py文件不存在的bug
 * 解决Arm平台无法打包的bug
+* 修改Windows打包操作系统环境
+###### 修复
+* 解决在Win7下无法打开的bug
 ---
