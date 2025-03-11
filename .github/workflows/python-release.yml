@@ -56,6 +56,7 @@ jobs:
             options: -v ${{ github.workspace }}/code:/code
             run: |
               cd /code
+              pip install -r requirements.txt
               pip install -r requirements/Paddle/requirements.txt
               python packing_app.py \
                     --head_str "import sys\nsys.path.append('/usr/local/conta_detect-1.0/python_lib')\nimport paddle\n" \
@@ -76,7 +77,7 @@ jobs:
                  --name 箱号图片抓拍Amd64  \
                  --app_name conta_capture_amd64 \
                  --lib_path conta_capture_amd64_lib64 \
-                 --is_exec False# `GH_PAT` is a secret that contains your PAT
+                 --is_exec False
 
       - name: 发布
         uses: softprops/action-gh-release@v1
