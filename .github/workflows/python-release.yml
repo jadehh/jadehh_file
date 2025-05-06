@@ -74,7 +74,7 @@ jobs:
               pip uninstall -y numpy
               python packing_app.py --extra_sys_str /usr/local/site-packages \
                   --head_str "import sys \nsys.path.append('/usr/local/opencv')\nsys.path.append('/usr/local/site-packages/')\n" \
-                  --name 箱号图片抓拍ONNX \
+                  --name 箱号图片抓拍 \
                   --app_name local_conta_capture_onnx \
                   --lib_path local_conta_capture_x86_lib64 \
                   --is_exec True
