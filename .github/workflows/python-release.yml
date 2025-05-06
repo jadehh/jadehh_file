@@ -72,6 +72,7 @@ jobs:
               cd /code
               pip install -r requirements.txt
               pip uninstall -y numpy
+              pip install Cython==3.0.8
               python packing_app.py --extra_sys_str /usr/local/site-packages \
                   --head_str "import sys \nsys.path.append('/usr/local/opencv')\nsys.path.append('/usr/local/site-packages/')\n" \
                   --name 箱号图片抓拍ONNX \
