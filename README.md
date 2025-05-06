@@ -1,5 +1,5 @@
 # 箱号图片抓拍
-## 箱号图片抓拍V3.0.3.6 - 2025-05-06 13:46:49
+## 箱号图片抓拍V3.0.3.6 - 2025-05-06 14:10:08
 conta_captureV3.0.3.6
 *  [发布地址](https://github.com/jadehh/ContainerOCR/releases/tag/conta_captureV3.0.3.6)
 *  [详细地址](https://github.com/jadehh/jadehh_file/releases/tag/conta_captureV3.0.3.6)
