@@ -61,6 +61,7 @@ jobs:
                   --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                   --app_name container_door_ocr_x64 \
                   --lib_path container_door_ocr_x64_lib \
+                  --remove_specify_files samplesTensorrtOps.py \
                   --is_exec False
 
       - name: 发布
