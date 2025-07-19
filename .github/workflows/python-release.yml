@@ -36,8 +36,8 @@ jobs:
           draft: false
           prerelease: false
   Windows:
-    name: 打包发布-操作系统版本:本机操作系统,Python版本:${{ matrix.python-version }}
-    runs-on: self-hosted
+    name: 打包发布-操作系统版本:(${{ matrix.os }},Python版本:${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
     permissions:
       contents: read
       security-events: write
@@ -45,6 +45,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        os: ["windows-latest"] # "ubuntu-18.04", "windows-latest
+#        os: ["windows-2019"] # "ubuntu-18.04", "windows-latest","macos-latest"
         python-version: ["3.6"]
     steps:
       - name: 时区设置
