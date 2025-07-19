@@ -49,6 +49,11 @@ jobs:
 #        os: ["windows-2019"] # "ubuntu-18.04", "windows-latest","macos-latest"
         python-version: ["3.6"]
     steps:
+      - name: Set up MSVC v142
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x86
+          toolset: 14.2   # 对应v142
       - name: 时区设置
         uses: szenius/set-timezone@v1.0 # 设置执行环境的时区
         with:
