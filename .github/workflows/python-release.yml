@@ -89,7 +89,7 @@ jobs:
         run: |
           pip install pywin32
           pip install -r code/requirements.txt
-          pip uninstall cython
+          pip uninstall -y cython
           pip install cython=0.29.33
       - name: macOS操作系统准备打包环境
         if: runner.os == 'macOS'
