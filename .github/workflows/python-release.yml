@@ -89,8 +89,6 @@ jobs:
         run: |
           pip install pywin32
           pip install -r code/requirements.txt
-          pip uninstall -y cython
-          pip install cython==0.29.33
       - name: macOS操作系统准备打包环境
         if: runner.os == 'macOS'
         shell: pwsh
@@ -102,10 +100,6 @@ jobs:
         shell: pwsh
         run: |
           cd code
-          set CL=/MD /D_WIN32_WINNT=0x0602
-          set LINK=/SUBSYSTEM:CONSOLE,6.02
-          echo "CL=/MD /D_WIN32_WINNT=0x0602" >> %GITHUB_ENV%
-          echo "LINK=/SUBSYSTEM:CONSOLE,6.02" >> %GITHUB_ENV%
           python packing.py   # --specify_files samplesMain.py
       - name: 测试是否打包完成
         shell: pwsh
