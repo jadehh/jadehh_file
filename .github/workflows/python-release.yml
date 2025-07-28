@@ -37,7 +37,7 @@ jobs:
           prerelease: false
   Windows:
     name: 打包发布-操作系统版本:(${{ matrix.os }},Python版本:${{ matrix.python-version }})
-    runs-on: ${{ matrix.os }}
+    runs-on: self-hosted
     permissions:
       contents: read
       security-events: write
