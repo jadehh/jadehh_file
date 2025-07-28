@@ -60,20 +60,6 @@ jobs:
           ref: AlgorithmConfiure
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 设置编译环境
-        run: |
-          # 降级到 VS2019 工具链
-          vcvars_path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-          if not exist "%vcvars_path%" (
-            echo "VS2019 not found, falling back to VS2022"
-            vcvars_path="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-          )
-          call "%vcvars_path%"
-            
-          # 设置兼容性标志
-          set CL=/MT /D_WIN32_WINNT=0x0602 /D NTDDI_VERSION=0x06020000
-          set LINK=/SUBSYSTEM:CONSOLE,6.02
-        shell: cmd
       - name: Windows操作系统安装Inno Setup 下载
         if: runner.os == 'Windows'
         uses: actions/checkout@v3
@@ -116,6 +102,10 @@ jobs:
         shell: pwsh
         run: |
           cd code
+          set CL=/MD /D_WIN32_WINNT=0x0602
+          set LINK=/SUBSYSTEM:CONSOLE,6.02
+          echo "CL=/MD /D_WIN32_WINNT=0x0602" >> %GITHUB_ENV%
+          echo "LINK=/SUBSYSTEM:CONSOLE,6.02" >> %GITHUB_ENV%
           python packing.py   # --specify_files samplesMain.py
       - name: 测试是否打包完成
         shell: pwsh
