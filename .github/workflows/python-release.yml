@@ -62,18 +62,18 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
       - name: 设置编译环境
         run: |
-            # 降级到 VS2019 工具链
-            vcvars_path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-            if not exist "%vcvars_path%" (
-              echo "VS2019 not found, falling back to VS2022"
-              vcvars_path="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-            )
-            call "%vcvars_path%"
+          # 降级到 VS2019 工具链
+          vcvars_path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          if not exist "%vcvars_path%" (
+            echo "VS2019 not found, falling back to VS2022"
+            vcvars_path="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          )
+          call "%vcvars_path%"
             
-            # 设置兼容性标志
-            set CL=/MT /D_WIN32_WINNT=0x0602 /D NTDDI_VERSION=0x06020000
-            set LINK=/SUBSYSTEM:CONSOLE,6.02 
-          shell: cmd
+          # 设置兼容性标志
+          set CL=/MT /D_WIN32_WINNT=0x0602 /D NTDDI_VERSION=0x06020000
+          set LINK=/SUBSYSTEM:CONSOLE,6.02
+        shell: cmd
       - name: Windows操作系统安装Inno Setup 下载
         if: runner.os == 'Windows'
         uses: actions/checkout@v3
