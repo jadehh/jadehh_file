@@ -1,13 +1,16 @@
-name: 线阵相机管理服务发布
+name: 视频拼接管理服务发布
 
 on:
   push:
     tags:
-      - ds_manage_serviceV*
+      - vs_manage_serviceV*
+
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 jobs:
   release:
-    name: 线阵相机管理服务发布
+    name: 视频拼接管理服务发布
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -28,8 +31,10 @@ jobs:
           draft: false
           prerelease: false
 
-  packing:
-    name:  线阵相机管理服务打包
+  amd64_job:
+    name:  视频拼接管理服务打包
+    container:
+      image: jadehh/python:3.8.16-ubuntu18.04
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -39,21 +44,20 @@ jobs:
       - name: 下载代码
         uses: actions/checkout@v3
         with:
-          repository: jadehh/DalsaStitching
-          ref: ds_manage_service
+          repository: jadehh/VideoStitching
+          ref: vs_manage_service
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-
-      - name: 编译打包
-        uses: addnab/docker-run-action@v3
-        with:
-          image: jadehh/python:3.8.16-ubuntu18.04
-          options: -v ${{ github.workspace }}/code:/code
-          run: |
-            cd /code
-            pip install -r requirements.txt
-            python packing_app.py --is_exec False
-            
+      - name: 安装pip环境
+        run: |
+          pip install -r code/requirements.txt
+          pip uninstall -y numpy
+      - name: 打包编译
+        run: |
+          cd code
+          python packing_app.py \
+                 --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
+                 --is_exec True
       - name: 发布
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
