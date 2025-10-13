@@ -55,9 +55,9 @@ jobs:
         with:
           image: jadehh/python:3.8.16-ubuntu18.04
           options: -v ${{ github.workspace }}/code:/code
-        run: |
-          cd code
-          python packing_app.py \
+          run: |
+            cd code
+            python packing_app.py \
                  --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                  --is_exec True
       - name: 发布
