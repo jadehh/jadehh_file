@@ -46,10 +46,6 @@ jobs:
           ref: vs_manage_service
           path: code
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-      - name: 安装pip环境
-        run: |
-          pip install -r code/requirements.txt
-          pip uninstall -y numpy
       - name: 打包编译
         uses: addnab/docker-run-action@v3
         with:
@@ -57,6 +53,8 @@ jobs:
           options: -v ${{ github.workspace }}/code:/code
           run: |
             cd code
+            pip install -r code/requirements.txt
+            pip uninstall -y numpy
             python packing_app.py \
                  --extra_sys_str /usr/local/site-packages,/usr/local/opencv \
                  --is_exec True
