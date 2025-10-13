@@ -33,8 +33,6 @@ jobs:
 
   amd64_job:
     name:  视频拼接管理服务打包
-    container:
-      image: jadehh/python:3.8.16-ubuntu18.04
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -53,6 +51,10 @@ jobs:
           pip install -r code/requirements.txt
           pip uninstall -y numpy
       - name: 打包编译
+        uses: addnab/docker-run-action@v3
+        with:
+          image: jadehh/python:3.8.16-ubuntu18.04
+          options: -v ${{ github.workspace }}/code:/code
         run: |
           cd code
           python packing_app.py \
